@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Home = () => {
-  return <div className="fixed inset-0 bg-red-300">Home</div>;
+const Home = async () => {
+  return <div className="bg-red-300">Home</div>;
 };
 
 export default Home;
