@@ -13,7 +13,7 @@ interface LayoutProps {
 }
 
 export const LayoutWithHeaderFooter = ({ children }: LayoutProps) => {
-  const [opened, { toggle, close: closeNavbar }] = useDisclosure(false);
+  const [opened, { toggle }] = useDisclosure(false);
 
   return (
     <AppShell header={{ height: 90 }} layout="alt">

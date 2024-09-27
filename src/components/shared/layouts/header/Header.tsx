@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { tss } from '@libs/utils/tss-style';
 import { MainContainer } from '@shared/layouts';
-
+import React from 'react';
 import LogoSvg from '@/assets/svgs/logo.svg';
 
 interface Props {

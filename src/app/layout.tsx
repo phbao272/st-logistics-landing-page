@@ -21,6 +21,7 @@ import {
 } from '@/providers';
 import { DatesProvider } from '@mantine/dates';
 import WebVitals from '@/components/shared/web-vitals';
+import React from 'react';
 
 const inter = Inter({
   subsets: ['latin'],

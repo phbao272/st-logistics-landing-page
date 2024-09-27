@@ -1,18 +1,12 @@
-"use client";
+'use client';
 
-import {
-  Box,
-  Collapse,
-  Group,
-  ThemeIcon,
-  UnstyledButton,
-  rem
-} from "@mantine/core";
-import { IconChevronRight } from "@tabler/icons-react";
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useStyles } from "./navbar-links-group.style";
+import { Box, Collapse, Group, ThemeIcon, UnstyledButton, rem } from '@mantine/core';
+import { IconChevronRight } from '@tabler/icons-react';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { useStyles } from './navbar-links-group.style';
+import React from 'react';
 
 interface LinksGroupProps {
   label: string;
@@ -29,7 +23,7 @@ export function LinksGroup({
   links,
   link,
   icon: Icon,
-  closeNavbar
+  closeNavbar,
 }: LinksGroupProps) {
   const { classes } = useStyles();
 
@@ -45,9 +39,7 @@ export function LinksGroup({
   const [opened, setOpened] = useState(initiallyOpened || false);
   const items = (hasLinks ? links : []).map((link) => (
     <Link
-      className={`${classes.link} ${
-        active === link.link ? classes.link_child_active : ""
-      }`}
+      className={`${classes.link} ${active === link.link ? classes.link_child_active : ''}`}
       href={link.link}
       key={link.label}
       onClick={closeNavbar}
@@ -69,40 +61,34 @@ export function LinksGroup({
       <UnstyledButton
         onClick={() => setOpened((o) => !o)}
         className={`${classes.control} ${
-          active === link || links?.some((l) => l.link === active)
-            ? classes.link_active
-            : ""
+          active === link || links?.some((l) => l.link === active) ? classes.link_active : ''
         }`}
       >
         <Group
           style={{
-            justifyContent: "space-between",
-            gap: 0
+            justifyContent: 'space-between',
+            gap: 0,
           }}
         >
           <Box
             onClick={onClick}
             style={{
-              display: "flex",
-              alignItems: "center",
+              display: 'flex',
+              alignItems: 'center',
 
               ...(!hasLinks
                 ? {
-                    width: "100%",
-                    height: "100%"
+                    width: '100%',
+                    height: '100%',
                   }
                 : {
-                    width: "calc(100% - 24px)",
-                    height: "100%"
-                  })
+                    width: 'calc(100% - 24px)',
+                    height: '100%',
+                  }),
             }}
           >
             {Icon && (
-              <ThemeIcon
-                variant="transparent"
-                className={classes.icon}
-                size={24}
-              >
+              <ThemeIcon variant="transparent" className={classes.icon} size={24}>
                 <Icon style={{ width: rem(16), height: rem(16) }} />
               </ThemeIcon>
             )}
@@ -118,7 +104,7 @@ export function LinksGroup({
               style={{
                 width: rem(14),
                 height: rem(14),
-                transform: opened ? "rotate(-90deg)" : "rotate(90deg)"
+                transform: opened ? 'rotate(-90deg)' : 'rotate(90deg)',
               }}
             />
           )}

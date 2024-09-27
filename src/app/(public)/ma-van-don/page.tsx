@@ -1,3 +1,5 @@
+import React from 'react';
+
 const TrackingNumberPage = async () => {
   const res = await fetch('http://localhost:6636/api/ma-van-don/?num=YT7489038596008');
   const data = await res.json();

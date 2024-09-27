@@ -1,6 +1,7 @@
 import { Paper, PaperProps } from '@mantine/core';
 import { PropsWithChildren } from 'react';
 import classes from './MainPaper.module.css';
+import React from 'react';
 
 type MainPaperProps = PaperProps & PropsWithChildren;
 

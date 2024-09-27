@@ -1,11 +1,11 @@
-import { toast } from "sonner";
+import { toast } from 'sonner';
 
 export const notEmptyMessage = (fieldName: string) => {
   return `${fieldName} không được để trống`;
 };
 
 export const fieldRequiredMessage = () => {
-  return "Trường này không được để trống";
+  return 'Trường này không được để trống';
 };
 
 export const maxLengthMessage = (fieldName: string, maxLength = 255) => {
@@ -13,15 +13,13 @@ export const maxLengthMessage = (fieldName: string, maxLength = 255) => {
 };
 
 export const numberWithCommas = (x: number) => {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
 
 export const formatCurrency = (amount: number) => {
-  return numberWithCommas(amount) + " VNĐ";
+  return numberWithCommas(amount) + ' VNĐ';
 };
 
 export const handleError = (error: any) => {
-  toast.error(
-    error?.response?.data?.message || error.message || "Lỗi hệ thống"
-  );
+  toast.error(error?.response?.data?.message || error.message || 'Lỗi hệ thống');
 };

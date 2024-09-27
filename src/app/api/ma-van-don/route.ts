@@ -30,6 +30,7 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Unsupported content type' }, { status: 415 });
     }
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
   }
 }

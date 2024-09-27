@@ -13,6 +13,7 @@ import {
   IconUsers,
 } from '@tabler/icons-react';
 import { useStyles } from './navbar.style';
+import React from 'react';
 
 export interface INavbar {
   label: string;

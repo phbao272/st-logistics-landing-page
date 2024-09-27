@@ -1,1 +1,1 @@
-export * from "./IconTrunk";
+export const a = 1;
