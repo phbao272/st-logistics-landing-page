@@ -1,9 +1,5 @@
 .paper {
-  min-height: calc(
-    100vh - var(--app-shell-header-height) - var(--mantine-spacing-sm)
-  );
-  /* border-radius: 16px 0 0 16px; */
-  padding: var(--mantine-spacing-lg) 16px 32px;
+  min-height: calc(100vh - var(--app-shell-header-height) - var(--mantine-spacing-sm));
   overflow: hidden;
 }
 

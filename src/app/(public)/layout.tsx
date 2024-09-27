@@ -1,5 +1,7 @@
+import { LayoutWithHeaderFooter } from '@/components/shared/layouts';
+
 const PublicLayout = ({ children }: { children: React.ReactNode }) => {
-  return <div className="min-h-[100vh]">{children}</div>;
+  return <LayoutWithHeaderFooter>{children}</LayoutWithHeaderFooter>;
 };
 
 export default PublicLayout;
