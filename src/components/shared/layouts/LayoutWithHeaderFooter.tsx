@@ -16,18 +16,17 @@ export const LayoutWithHeaderFooter = ({ children }: LayoutProps) => {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
-    <AppShell header={{ height: 90 }} layout="alt">
-      <AppShell.Header>
-        <Header toggle={toggle} opened={opened} />
-      </AppShell.Header>
+    <>
+      <AppShell header={{ height: 90 }} layout="alt">
+        <AppShell.Header className="border-none bg-transparent">
+          <Header toggle={toggle} opened={opened} />
+        </AppShell.Header>
 
-      <AppShellMain className={classes.layout}>
-        <MainPaper>{children}</MainPaper>
-      </AppShellMain>
-
-      <AppShell.Footer>
-        <Footer />
-      </AppShell.Footer>
-    </AppShell>
+        <AppShellMain className={classes.layout}>
+          <MainPaper>{children}</MainPaper>
+        </AppShellMain>
+      </AppShell>
+      <Footer />
+    </>
   );
 };

@@ -1,5 +1,5 @@
-import { theme } from "@libs/theme";
-import { createTss } from "tss-react";
+import { theme } from '@libs/theme';
+import { createTss } from 'tss-react';
 
 function useContext() {
   const myTheme = {
@@ -14,6 +14,10 @@ export const { tss } = createTss({ useContext });
 
 export const useGlobalStyles = tss.create({
   colorRed: {
-    color: "red",
+    color: 'red',
   },
 });
+
+export const colors = {
+  primary: '#1B264A',
+};

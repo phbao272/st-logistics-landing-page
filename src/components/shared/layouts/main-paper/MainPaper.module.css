@@ -1,6 +1,6 @@
 .paper {
   min-height: calc(100vh - var(--app-shell-header-height) - var(--mantine-spacing-sm));
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .scroll {

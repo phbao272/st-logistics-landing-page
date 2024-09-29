@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { tss } from '@libs/utils/tss-style';
 import { MainContainer } from '@shared/layouts';
 import React from 'react';
-import LogoSvg from '@/assets/svgs/logo.svg';
+// import LogoSvg from '@/assets/svgs/logo.svg';
 
 interface Props {
   toggle?: () => void;
@@ -61,7 +61,13 @@ export function Header({ opened, toggle }: Props) {
             alignItems: 'center',
           }}
         >
-          <Image src={LogoSvg.src} alt="logo" className={classes.logo} />
+          <Image
+            src={
+              'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
+            }
+            alt="logo"
+            className={classes.logo}
+          />
 
           <Flex
             style={{
@@ -73,7 +79,7 @@ export function Header({ opened, toggle }: Props) {
               <Link
                 href={item.href}
                 key={index}
-                className={`${classes.headerNavLink} ${pathname === `${item.href}/` ? 'active' : ''}`}
+                className={`${classes.headerNavLink} ${pathname === `${item.href}/` || pathname === `${item.href}` ? 'active' : ''}`}
               >
                 {item.title}
               </Link>
@@ -92,8 +98,8 @@ const useStyles = tss.withParams<{ headerScrolled: boolean }>().create(({ header
     padding: '8px 0px',
     zIndex: 1000,
     transition: 'background-color 0.3s ease',
-    height: '100%',
-    backgroundColor: '#8f9ca3',
+    height: 90,
+    backgroundColor: 'transparent',
   },
 
   headerScrolled: {
@@ -114,7 +120,7 @@ const useStyles = tss.withParams<{ headerScrolled: boolean }>().create(({ header
     '&::after': {
       content: '""',
       position: 'absolute',
-      bottom: 14,
+      bottom: 10,
       opacity: 0,
       left: 0,
       width: '100%',
@@ -137,7 +143,7 @@ const useStyles = tss.withParams<{ headerScrolled: boolean }>().create(({ header
   },
 
   logo: {
-    height: headerScrolled ? 60 : 40,
+    height: headerScrolled ? 25 : 30,
     transition: 'height 0.3s ease',
   },
 }));
