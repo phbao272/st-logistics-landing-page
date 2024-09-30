@@ -15,6 +15,9 @@ const config: Config = {
       textColor: {
         primary: '#1B264A',
       },
+      backgroundColor: {
+        primary: '#1B264A',
+      },
     },
   },
   plugins: [],

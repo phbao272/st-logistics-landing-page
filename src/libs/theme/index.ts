@@ -1,27 +1,27 @@
-"use client";
+'use client';
 
 import {
   createTheme,
   DEFAULT_THEME,
   MantineBreakpointsValues,
-  mergeMantineTheme
-} from "@mantine/core";
-import { themeToVars } from "@mantine/vanilla-extract";
+  mergeMantineTheme,
+} from '@mantine/core';
+import { themeToVars } from '@mantine/vanilla-extract';
 
 export const themeOverride = createTheme({
   // primaryColor: "", // Change primary color
   other: {
-    maxApplicationWidth: 1400
+    maxApplicationWidth: 1600,
   },
   components: {
     Button: {
       styles: {
         label: {
-          overflow: "unset"
-        }
-      }
-    }
-  }
+          overflow: 'unset',
+        },
+      },
+    },
+  },
 });
 
 export const theme = mergeMantineTheme(DEFAULT_THEME, themeOverride);
@@ -49,7 +49,7 @@ export const vars = themeToVars(theme);
 export const mq = Object.keys(theme.breakpoints).reduce(
   (acc, mantineSize) => ({
     ...acc,
-    [mantineSize]: `@media ${vars.smallerThan(mantineSize)}`
+    [mantineSize]: `@media ${vars.smallerThan(mantineSize)}`,
   }),
-  {} as Record<keyof MantineBreakpointsValues, string>
+  {} as Record<keyof MantineBreakpointsValues, string>,
 );

@@ -51,7 +51,7 @@ export const IntroCard = ({ description, icon, title }: Props) => {
 export const ListServiceCard = () => {
   return (
     <Container
-      size={'lg'}
+      size={'xl'}
       className="absolute bottom-0 left-0 right-0 flex translate-y-1/2 justify-center px-2 shadow-sm"
     >
       {CARDS.map((service) => (
