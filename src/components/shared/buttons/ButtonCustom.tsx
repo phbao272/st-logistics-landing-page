@@ -30,7 +30,7 @@ const useStyles = tss.withParams<{ isOutline: boolean }>().create(({ isOutline }
 
     '&:hover': {
       transform: 'translateY(-8px)',
-      color: isOutline ? '#000' : '#FFFFFF',
+      color: isOutline ? '#1B264A' : '#FFFFFF',
     },
   },
 

@@ -73,7 +73,7 @@ const MotionCard = ({ description, title, index }: CardProps) => {
       ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 1, ease: 'easeOut', delay: 0.3 * index }}
+      transition={{ duration: 0.7, ease: 'easeOut', delay: 0.15 * index }}
       className="flex flex-col items-center gap-5 rounded-[30px] bg-white p-8 text-primary shadow-lg"
     >
       <div className="flex h-[96px] w-[96px] items-center justify-center rounded-full bg-primary p-4 text-white">

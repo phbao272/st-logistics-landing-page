@@ -1,7 +1,5 @@
 import React from 'react';
-import { Introduction } from './components/introduction';
-import { AboutUs } from './components/about-us';
-import { Offer } from './components/offer';
+import { Introduction, Slide, AboutUs, Offer } from './components';
 
 export const HomePage = () => {
   return (
@@ -10,6 +8,7 @@ export const HomePage = () => {
       <div className="h-[200px]" />
       <AboutUs />
       <Offer />
+      <Slide />
     </>
   );
 };
