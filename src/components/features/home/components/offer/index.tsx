@@ -81,7 +81,12 @@ const MotionCard = ({ description, title, index }: CardProps) => {
       </div>
       <h3 className="text-lg font-semibold">{title}</h3>
       <p className="text-justify text-base font-medium">{description}</p>
-      <ButtonCustom className="w-fit" size="lg" rightSection={<IconArrowRight size={20} />}>
+      <ButtonCustom
+        variant="outline"
+        className="w-fit"
+        size="lg"
+        rightSection={<IconArrowRight size={20} />}
+      >
         CHECK OFFER
       </ButtonCustom>
     </motion.div>

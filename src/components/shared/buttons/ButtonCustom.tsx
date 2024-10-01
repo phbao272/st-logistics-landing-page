@@ -7,7 +7,9 @@ import { tss } from '@libs/utils/tss-style';
 interface Props extends ButtonProps {}
 
 export const ButtonCustom = ({ children, className, ...props }: PropsWithChildren<Props>) => {
-  const { classes, cx } = useStyles();
+  const { classes, cx } = useStyles({
+    isOutline: props.variant === 'outline',
+  });
 
   return (
     <Button className={cx(classes.button, classes.gradientBorderRefill, className)} {...props}>
@@ -16,9 +18,9 @@ export const ButtonCustom = ({ children, className, ...props }: PropsWithChildre
   );
 };
 
-const useStyles = tss.create(() => ({
+const useStyles = tss.withParams<{ isOutline: boolean }>().create(({ isOutline }) => ({
   button: {
-    color: '#FFFFFF',
+    color: isOutline ? '#000' : '#FFFFFF',
     fontSize: 'clamp(0.6875rem, 0.4012rem + 0.4469vw, 0.9375rem)',
     fontWeight: 600,
     transition: 'transform 0.3s ease',
@@ -28,11 +30,14 @@ const useStyles = tss.create(() => ({
 
     '&:hover': {
       transform: 'translateY(-8px)',
+      color: isOutline ? '#000' : '#FFFFFF',
     },
   },
 
   gradientBorderRefill: {
-    background: `linear-gradient(#1B264A 0 0) padding-box, linear-gradient(138deg, #455589 0%, #B4B4B4 100%) border-box`,
+    background: isOutline
+      ? `linear-gradient(#fff 0 0) padding-box, linear-gradient(138deg, #455589 0%, #B4B4B4 100%) border-box`
+      : `linear-gradient(#1B264A 0 0) padding-box, linear-gradient(138deg, #455589 0%, #B4B4B4 100%) border-box`,
     borderRadius: '20px',
     border: '2px solid transparent',
   },
