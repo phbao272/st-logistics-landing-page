@@ -1,5 +1,13 @@
 import React from 'react';
-import { Introduction, Slide, AboutUs, Offer, WhyUs, BackgroundIntro } from './components';
+import {
+  Introduction,
+  Slide,
+  AboutUs,
+  Offer,
+  WhyUs,
+  BackgroundIntro,
+  LatestNews,
+} from './components';
 
 export const HomePage = () => {
   return (
@@ -11,6 +19,7 @@ export const HomePage = () => {
       <Slide />
       <WhyUs />
       <BackgroundIntro />
+      <LatestNews />
     </>
   );
 };
