@@ -7,6 +7,7 @@ import {
   WhyUs,
   BackgroundIntro,
   LatestNews,
+  ContactUs,
 } from './components';
 
 export const HomePage = () => {
@@ -20,6 +21,7 @@ export const HomePage = () => {
       <WhyUs />
       <BackgroundIntro />
       <LatestNews />
+      <ContactUs />
     </>
   );
 };

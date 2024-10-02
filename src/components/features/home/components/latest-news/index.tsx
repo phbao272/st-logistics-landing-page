@@ -6,7 +6,7 @@ import { LatestNewsSlide } from './components/LatestNewsSlide';
 
 export const LatestNews = () => {
   return (
-    <Container size="xl" className="flex w-full flex-col gap-8">
+    <Container size="lg" className="flex w-full flex-col gap-8">
       <div className="flex items-center justify-between pt-[80px]">
         <div>
           <h2 className="text-[clamp(3.375rem,2.6592rem_+_1.1173vw,4rem)] font-medium text-[#3E3F41]">

@@ -61,13 +61,15 @@ export function Header({ opened, toggle }: Props) {
             alignItems: 'center',
           }}
         >
-          <Image
-            src={
-              'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
-            }
-            alt="logo"
-            className={classes.logo}
-          />
+          <Link href={'/'}>
+            <Image
+              src={
+                'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
+              }
+              alt="logo"
+              className={classes.logo}
+            />
+          </Link>
 
           <Flex
             style={{

@@ -2,16 +2,17 @@
 
 import React, { useRef, useState } from 'react';
 import SwiperCore from 'swiper';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper as ReactSwiper } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 import { Box, Button } from '@mantine/core';
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
+import { twMerge } from 'tailwind-merge';
 
-SwiperCore.use([Autoplay, Navigation]);
+SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 export interface SwiperProps extends React.ComponentProps<typeof ReactSwiper> {
   hideNavigation?: boolean;
@@ -24,6 +25,7 @@ const Swiper: React.FC<SwiperProps> = ({
   defaultActiveSlide,
   hideNavigation = false,
   isOverflowHidden,
+  className,
   ...props
 }) => {
   const swiperRef = useRef<SwiperCore>();
@@ -31,7 +33,7 @@ const Swiper: React.FC<SwiperProps> = ({
   const [isEnd, setIsEnd] = useState(false);
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div className={twMerge('relative', className)}>
       <ReactSwiper
         style={{
           overflow: isOverflowHidden ? 'hidden' : 'visible',
@@ -73,6 +75,7 @@ const Swiper: React.FC<SwiperProps> = ({
       {!hideNavigation && (
         <Box>
           <Button
+            variant="transparent"
             onClick={() => swiperRef.current?.slidePrev()}
             style={{
               position: 'absolute',
@@ -83,30 +86,31 @@ const Swiper: React.FC<SwiperProps> = ({
               transform: 'translateY(-50%)',
               zIndex: 49,
 
-              opacity: 0,
+              opacity: 1,
               transition: 'opacity 0.2s ease-in-out',
               cursor: isBeginning ? 'not-allowed !important' : 'pointer',
             }}
           >
-            <IconChevronLeft size={18} />
+            <IconArrowLeft size={32} className="text-primary" />
           </Button>
           <Button
+            variant="transparent"
             onClick={() => swiperRef.current?.slideNext()}
             style={{
               position: 'absolute',
               width: 48,
               height: 48,
-              left: -24,
+              right: -24,
               top: '50%',
               transform: 'translateY(-50%)',
               zIndex: 49,
 
-              opacity: 0,
+              opacity: 1,
               transition: 'opacity 0.2s ease-in-out',
               cursor: isEnd ? 'not-allowed !important' : 'pointer',
             }}
           >
-            <IconChevronRight size={18} />
+            <IconArrowRight size={32} className="text-primary" />
           </Button>
         </Box>
       )}
