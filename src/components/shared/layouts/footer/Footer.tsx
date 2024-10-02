@@ -105,10 +105,7 @@ export const Footer = () => {
 
           <p className="text-center text-xs">
             Made by{' '}
-            <a
-              href="
-            https://www.linkedin.com/in/mateusz-kowalski-5b5b6b1a3/"
-            >
+            <a href="https://t.me/Donki_hote" target="_blank">
               <b>Donkihote</b>
             </a>
           </p>
