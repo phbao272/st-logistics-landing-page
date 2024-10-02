@@ -26,6 +26,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .test {
+    color: red;
+  }
 }
 
 .swiper {

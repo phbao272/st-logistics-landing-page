@@ -11,7 +11,7 @@ import { NextAppDirEmotionCacheProvider } from 'tss-react/next/appDir';
 import { theme } from '@libs/theme';
 
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import {
   Provider,
   QueryClientProvider,
@@ -23,7 +23,7 @@ import { DatesProvider } from '@mantine/dates';
 import WebVitals from '@/components/shared/web-vitals';
 import React from 'react';
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
 });
@@ -43,7 +43,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme="light" />
       </head>
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <WebVitals />
         <JotaiProvider>
           <QueryClientProvider>

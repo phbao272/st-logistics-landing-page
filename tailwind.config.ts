@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -18,8 +19,25 @@ const config: Config = {
       backgroundColor: {
         primary: '#1B264A',
       },
+      textStrokeWidth: {
+        '1': '1px',
+      },
+      textStrokeColor: {
+        primary: '#F5F5F5',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-stroke': {
+          '-webkit-text-stroke-width': '1px',
+          '-webkit-text-stroke-color': '#F5F5F5',
+          color: 'transparent',
+        },
+      };
+      addUtilities(newUtilities);
+    }),
+  ],
 };
 export default config;

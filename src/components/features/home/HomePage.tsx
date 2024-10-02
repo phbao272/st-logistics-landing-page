@@ -1,5 +1,5 @@
 import React from 'react';
-import { Introduction, Slide, AboutUs, Offer } from './components';
+import { Introduction, Slide, AboutUs, Offer, WhyUs, BackgroundIntro } from './components';
 
 export const HomePage = () => {
   return (
@@ -9,6 +9,8 @@ export const HomePage = () => {
       <AboutUs />
       <Offer />
       <Slide />
+      <WhyUs />
+      <BackgroundIntro />
     </>
   );
 };

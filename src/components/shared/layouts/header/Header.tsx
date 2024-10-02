@@ -79,6 +79,7 @@ export function Header({ opened, toggle }: Props) {
               <Link
                 href={item.href}
                 key={index}
+                prefetch
                 className={`${classes.headerNavLink} ${pathname === `${item.href}/` || pathname === `${item.href}` ? 'active' : ''}`}
               >
                 {item.title}

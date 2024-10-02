@@ -2,7 +2,7 @@
 
 import { ButtonCustom } from '@/components/shared/buttons';
 import { Container } from '@mantine/core';
-import { IconArrowRight } from '@tabler/icons-react';
+import { IconArrowRight, IconArrowUpRight } from '@tabler/icons-react';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -39,7 +39,14 @@ export const Offer = () => {
             </p>
           </div>
 
-          <ButtonCustom>CHECK FULL OFFER</ButtonCustom>
+          <ButtonCustom
+            variant="transparent"
+            className="w-fit"
+            size="xl"
+            rightSection={<IconArrowUpRight size={20} />}
+          >
+            CHECK FULL OFFER
+          </ButtonCustom>
 
           <Container
             size={'xl'}
