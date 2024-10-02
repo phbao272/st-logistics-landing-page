@@ -22,6 +22,9 @@ export const Slide = () => {
           height: '100%',
         }}
         loop={true}
+        autoplay={{
+          delay: 3000,
+        }}
         breakpoints={{
           900: {
             slidesPerView: 2,

@@ -42,7 +42,7 @@ const NumberCountUp = ({ number }: NumberCountUpProps) => {
     <p
       ref={mergeRefs(ref, countUpRef)}
       className={twMerge(
-        'text-stroke w-full text-center text-[clamp(3.75rem,1.6027rem_+_3.352vw,5.625rem)] font-semibold',
+        'w-full max-w-[360px] text-center text-[clamp(3.75rem,1.6027rem_+_3.352vw,5.625rem)] font-semibold text-stroke',
         rubik.className,
       )}
     >

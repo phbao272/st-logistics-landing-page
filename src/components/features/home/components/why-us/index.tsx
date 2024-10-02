@@ -6,7 +6,7 @@ import WorldSvg from '@assets/svgs/why-us/world.svg';
 
 export const WhyUs = () => {
   return (
-    <div className="px-4 py-16 text-center">
+    <div className="px-4 pb-16 text-center">
       <h2 className="mb-4 text-4xl font-medium">
         <b>Why</b> us?
       </h2>

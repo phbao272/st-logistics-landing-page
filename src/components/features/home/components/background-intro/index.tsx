@@ -18,17 +18,17 @@ export const BackgroundIntro = () => {
         <div className="z-10 flex w-full max-w-6xl flex-col justify-around gap-10 md:flex-row">
           <div className="mb-8 flex-1 text-center md:mb-0">
             <NumberCountUp number={10} />
-            <hr className="mx-auto my-2 w-full border-t-2 border-white" />
+            <hr className="mx-auto my-2 w-[360px] border-t-2 border-white" />
             <p className="text-wrap text-xl font-semibold">YEARS OF EXPERIENCE</p>
           </div>
           <div className="mb-8 flex-1 text-center md:mb-0">
             <NumberCountUp number={10000} />
-            <hr className="mx-auto my-2 w-full border-t-2 border-white" />
+            <hr className="mx-auto my-2 w-[360px] border-t-2 border-white" />
             <p className="text-wrap text-xl font-semibold">ORGANIZED TRANSPORTATION</p>
           </div>
           <div className="mb-8 flex-1 text-center md:mb-0">
             <NumberCountUp number={600000} />
-            <hr className="mx-auto my-2 w-full border-t-2 border-white" />
+            <hr className="mx-auto my-2 w-[360px] border-t-2 border-white" />
             <p className="text-wrap text-xl font-semibold">TONS OF PRODUCTS DELIVERED</p>
           </div>
         </div>
