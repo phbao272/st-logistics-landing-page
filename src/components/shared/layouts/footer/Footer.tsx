@@ -1,119 +1,121 @@
 'use client';
 
+import React from 'react';
 import { tss } from '@/libs/utils/tss-style';
 import { Container, Image } from '@mantine/core';
 import { IconMail, IconPhone } from '@tabler/icons-react';
 import Link from 'next/link';
-import React from 'react';
 
-export const Footer = () => {
+interface IItem {
+  label: string;
+  href: string;
+}
+
+const MENU_ITEMS = [
+  { label: 'Home', href: '#' },
+  { label: 'Offer', href: '#' },
+  { label: 'Contact', href: '#' },
+];
+
+const OTHER_ITEMS = [
+  { label: 'Privacy policy', href: '#' },
+  { label: 'Cookies policy', href: '#' },
+  { label: 'Transport Conditions', href: '#' },
+];
+
+const CONTACT_INFO = [
+  { icon: IconPhone, title: 'Call us', content: '+48 660-177-549' },
+  { icon: IconMail, title: 'Send email', content: 'office@sota.com' },
+];
+
+const Footer = () => {
+  return (
+    <>
+      <div className="bg-primary">
+        <Container size="lg" className="flex gap-12 py-20">
+          <CompanyInfo />
+          <div className="grid flex-1 grid-cols-3 gap-8 text-white">
+            <MenuSection title="Menu" items={MENU_ITEMS} />
+            <MenuSection title="Other" items={OTHER_ITEMS} />
+            <FastContact />
+          </div>
+        </Container>
+      </div>
+      <Copyright />
+    </>
+  );
+};
+
+const CompanyInfo = () => (
+  <div className="text-white">
+    <Link href="/">
+      <Image
+        src="https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png"
+        alt="logo"
+        className="h-[50px]"
+      />
+    </Link>
+    <p className="text-lg font-bold">YOUR PROVEN PARTNER IN LOGISTICS</p>
+    <hr className="my-4 border-gray-500" />
+    <p>Your Best Partner Sp. z o.o.</p>
+    <p>NIP: 5588774411 KRS: 4444555222</p>
+    <div className="mt-4 flex items-center">
+      <i className="fas fa-map-marker-alt mr-2"></i>
+      <p>Poland — Ul. Osiedlowa 1/6, 64-316 Kuślin</p>
+    </div>
+  </div>
+);
+
+const MenuSection = ({ title, items }: { title: string; items: IItem[] }) => {
   const { classes } = useStyles();
-
   return (
     <div>
-      <div className="bg-primary">
-        <Container size={'lg'} className="flex gap-12 py-20">
-          <div className="text-white">
-            <Link href={'/'}>
-              <Image
-                src={
-                  'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
-                }
-                alt="logo"
-                className={'h-[50px]'}
-              />
+      <p className="mb-4 text-lg font-bold">{title}</p>
+      <hr className="my-4 w-[4rem] border-gray-500" />
+      <ul>
+        {items.map((item, index) => (
+          <li key={index} className={classes.item}>
+            <Link className={classes.item} href={item.href}>
+              {item.label}
             </Link>
-            <p className="text-lg font-bold">YOUR PROVEN PARTNER IN LOGISTICS</p>
-            <hr className="my-4 border-gray-500" />
-            <p>Your Best Partner Sp. z o.o.</p>
-            <p>NIP: 5588774411 KRS: 4444555222</p>
-            <div className="mt-4 flex items-center">
-              <i className="fas fa-map-marker-alt mr-2"></i>
-              <p>Poland — Ul. Osiedlowa 1/6, 64-316 Kuślin</p>
-            </div>
-          </div>
-          <div className="grid flex-1 grid-cols-3 gap-8 text-white">
-            <div>
-              <p className="mb-4 text-lg font-bold">Menu</p>
-              <hr className="my-4 w-[4rem] border-gray-500" />
-              <ul>
-                <li className={classes.item}>
-                  <Link className={classes.item} href="#">
-                    Home
-                  </Link>
-                </li>
-                <li className={classes.item}>
-                  <Link className={classes.item} href="#">
-                    Offer
-                  </Link>
-                </li>
-                <li className={classes.item}>
-                  <Link className={classes.item} href="#">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="mb-4 text-lg font-bold">Other</p>
-              <hr className="my-4 w-[4rem] border-gray-500" />
-              <ul>
-                <li className={classes.item}>
-                  <Link className={classes.item} href="#">
-                    Privacy policy
-                  </Link>
-                </li>
-                <li className={classes.item}>
-                  <Link className={classes.item} href="#">
-                    Cookies policy
-                  </Link>
-                </li>
-                <li className={classes.item}>
-                  <Link className={classes.item} href="#">
-                    Transport Conditions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="mb-4 text-lg font-bold">Fast contact</p>
-              <hr className="my-4 w-[4rem] border-gray-500" />
-              <div className="mb-4 flex items-center justify-start gap-2">
-                <IconPhone size={40} />
-                <div className="flex flex-col">
-                  <p>Call us</p>
-                  <p>+48 660-177-549</p>
-                </div>
-              </div>
-              <div className="mb-4 flex items-center justify-start gap-2">
-                <IconMail size={40} />
-                <div className="flex flex-col">
-                  <p>Send email</p>
-                  <p>office@sota.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      <div className="bg-white">
-        <Container size={'lg'} className="flex justify-between py-4 text-primary">
-          <p className="text-center text-xs">
-            © 2021 Your Best Partner Sp. z o.o. All rights reserved.
-          </p>
-
-          <p className="text-center text-xs">
-            Made by{' '}
-            <a href="https://t.me/Donki_hote" target="_blank">
-              <b>Donkihote</b>
-            </a>
-          </p>
-        </Container>
-      </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
+
+const FastContact = () => (
+  <div>
+    <p className="mb-4 text-lg font-bold">Fast contact</p>
+    <hr className="my-4 w-[4rem] border-gray-500" />
+    {CONTACT_INFO.map((info, index) => (
+      <div key={index} className="mb-4 flex items-center justify-start gap-2">
+        <info.icon size={40} />
+        <div className="flex flex-col">
+          <p>{info.title}</p>
+          <p>{info.content}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+
+const Copyright = () => (
+  <div className="bg-white">
+    <Container size="lg" className="flex justify-between py-4 text-primary">
+      <p className="text-center text-xs">
+        © 2021 Your Best Partner Sp. z o.o. All rights reserved.
+      </p>
+      <p className="text-center text-xs">
+        Made by{' '}
+        <a href="https://t.me/Donki_hote" target="_blank" rel="noopener noreferrer">
+          <b>Donkihote</b>
+        </a>
+      </p>
+    </Container>
+  </div>
+);
 
 const useStyles = tss.create({
   item: {
@@ -123,10 +125,11 @@ const useStyles = tss.create({
     transform: 'translateY(0px)',
     marginTop: '0.5rem',
     padding: '0.5rem 0',
-
     '&:hover': {
       transform: 'translateY(8px)',
       color: '#455589',
     },
   },
 });
+
+export { Footer };

@@ -7,6 +7,8 @@ import { usePathname } from 'next/navigation';
 import { tss } from '@libs/utils/tss-style';
 import { MainContainer } from '@shared/layouts';
 import React from 'react';
+import { ButtonCustom } from '../../buttons';
+import { IconMail, IconPhone } from '@tabler/icons-react';
 // import LogoSvg from '@/assets/svgs/logo.svg';
 
 interface Props {
@@ -87,6 +89,12 @@ export function Header({ opened, toggle }: Props) {
                 {item.title}
               </Link>
             ))}
+            <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
+              <IconPhone size={20} />
+            </ButtonCustom>
+            <ButtonCustom className="w-fit" size="lg" rightSection={<IconMail size={20} />}>
+              Get a quote
+            </ButtonCustom>
           </Flex>
 
           <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
