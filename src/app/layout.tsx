@@ -42,6 +42,12 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <ColorSchemeScript defaultColorScheme="light" />
+        <link rel="preload" as="video" href="https://vimeo.com/942971586?share=copy" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://yourbestpartner.eu/wp-content/uploads/2024/05/bg-video-6639c7b0520cd.webp"
+        />
       </head>
       <body className={outfit.className}>
         <WebVitals />

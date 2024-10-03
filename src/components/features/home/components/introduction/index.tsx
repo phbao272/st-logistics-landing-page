@@ -4,6 +4,7 @@ import { ListServiceCard } from './components/IntroCard';
 import { ButtonCustom } from '@/components/shared/buttons';
 import { IconArrowRight } from '@tabler/icons-react';
 import { AnimatedText } from '@/components/shared/animations';
+import { IntroVideo } from './components/IntroVideo';
 
 export const Introduction = () => {
   return (
@@ -23,7 +24,7 @@ export const Introduction = () => {
           CHECK OFFER
         </ButtonCustom>
       </main>
-
+      <IntroVideo />
       <ListServiceCard />
     </div>
   );
