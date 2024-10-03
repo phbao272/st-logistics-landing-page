@@ -26,6 +26,7 @@ const Swiper: React.FC<SwiperProps> = ({
   hideNavigation = false,
   isOverflowHidden,
   className,
+  modules,
   ...props
 }) => {
   const swiperRef = useRef<SwiperCore>();
@@ -53,7 +54,7 @@ const Swiper: React.FC<SwiperProps> = ({
             spaceBetween: 10,
           },
         }}
-        modules={[Navigation]}
+        modules={[Navigation, ...(modules || [])]}
         grabCursor
         onBeforeInit={(swiper) => {
           if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
