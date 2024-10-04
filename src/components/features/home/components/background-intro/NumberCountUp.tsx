@@ -7,7 +7,7 @@ import { useCountUp } from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { twMerge } from 'tailwind-merge';
 
-const rubik = Rubik({
+export const rubik = Rubik({
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
 });

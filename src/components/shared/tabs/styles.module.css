@@ -1,0 +1,36 @@
+.list {
+  position: relative;
+  margin-bottom: var(--mantine-spacing-md);
+  width: 100%;
+  max-width: 350px;
+  gap: 20px;
+}
+
+.tab {
+  z-index: 1;
+  font-weight: 500;
+  background-color: #f7f8ff;
+  border-radius: 25px;
+  transition: all 800ms ease;
+  color: #54595f;
+  padding: 30px 20px;
+
+  font-size: 16px;
+  text-align: start;
+
+  text-transform: uppercase;
+
+  &[data-active] {
+    background-color: #1b264a;
+    box-shadow: 0px 0px 40px -13px rgba(0, 0, 0, 0.5);
+    color: #f7f8ff;
+    transform: translateY(0px) !important;
+  }
+
+  &:hover {
+    background-color: #1b264a;
+    box-shadow: 0px 0px 40px -13px rgba(0, 0, 0, 0.5);
+    color: #f7f8ff;
+    transform: translateY(-5px);
+  }
+}
