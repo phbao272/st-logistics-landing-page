@@ -25,6 +25,9 @@ const config: Config = {
       textStrokeColor: {
         primary: '#F5F5F5',
       },
+      fontFamily: {
+        rubik: ['Rubik', 'sans-serif'],
+      },
     },
   },
   plugins: [

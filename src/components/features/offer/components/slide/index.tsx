@@ -1,59 +1,97 @@
 'use client';
 
-import { PaginationOptions } from 'swiper/types';
-
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFade, Autoplay } from 'swiper/modules';
+import { motion, AnimatePresence } from 'framer-motion';
+import 'swiper/css';
 import 'swiper/css/effect-fade';
-import { Image } from '@mantine/core';
-import { ListServiceCard } from '@/components/features/home/components/introduction/components/IntroCard';
-
 import styles from './styles.module.css';
+import { ListOfferCard } from './components/ListOfferCard';
 
 const DATA = [
   {
-    image:
-      'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-2-663601dfc2c45-qnnr8tf825bpv2iky65b12xqa1cgp8a78vyc5rk1fm.webp',
-    date: 'May 12, 2021 / News',
-    title: 'Transport of Animal By-Products: Key Aspects and Requirements',
+    image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-66698-66462d09b8d4b.webp',
+    title: 'Food transport',
+    subtitle: 'Work with experts to enjoy great results.',
   },
   {
-    image:
-      'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-1-663601dfd9805-qnnr8ud28zd06oh7sojxlkp6vf7twxdxl0ltn1in9e.webp',
-    date: 'May 12, 2021',
-    title: 'Category 3 Animal By-Products: What You Need to Know',
+    image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-022-6645f1e5d22f5.webp',
+    title: 'Transport of animal food',
+    subtitle:
+      'Take the first step towards efficient, safe and well-thought-out logistics in your business.',
   },
   {
-    image:
-      'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-3-663601e19d508-qnnr8shdvbafjgjy3nqogl69onh3hj6gwrauohlflu.webp',
-    date: 'May 12, 2021',
-    title: 'Paradoxes of Animal By-Products Transport',
-  },
-  {
-    image:
-      'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-1-663601dfd9805-qnnr8ud28zd06oh7sojxlkp6vf7twxdxl0ltn1in9e.webp',
-    date: 'May 12, 2021',
-    title: 'Category 3 Animal By-Products: What You Need to Know',
+    image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-9-66437d05d04c5.webp',
+    title: 'Local business',
+    subtitle: 'Work with experts to enjoy great results.',
   },
 ];
 
+const SlideContent = ({ item }: { item: (typeof DATA)[0] }) => (
+  <div className={styles.slideWrapper}>
+    <motion.div
+      className={styles.background}
+      style={{
+        backgroundImage: `url(${item.image})`,
+      }}
+      initial={{ scale: 1 }}
+      animate={{ scale: 1.1 }}
+      transition={{ duration: 10, ease: 'easeOut' }}
+    />
+    <div className={styles.content}>
+      <div
+        className="absolute inset-0 bg-black opacity-[0.5] mix-blend-normal"
+        style={{
+          borderRadius: 'inherit',
+        }}
+      />
+      <main className="z-10 flex max-w-[80%] flex-col items-center gap-5 pb-6 text-center text-white">
+        <motion.h1
+          className="text-[clamp(4.75rem,3.3184rem+2.2346vw,6rem)] font-extrabold uppercase leading-none text-white"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: 'linear' }}
+        >
+          {item.title}
+        </motion.h1>
+        <motion.p
+          className="text-[clamp(1.125rem,0.8387rem+0.4469vw,1.375rem)] font-normal"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: 'linear' }}
+        >
+          {item.subtitle}
+        </motion.p>
+      </main>
+    </div>
+  </div>
+);
+
 export const Slide = () => {
-  const pagination: PaginationOptions = {
-    clickable: true,
-  };
+  return (
+    <div className="relative">
+      <Swiper
+        spaceBetween={30}
+        loop
+        autoplay={{
+          delay: 10000,
+          disableOnInteraction: false,
+        }}
+        effect={'fade'}
+        grabCursor
+        modules={[EffectFade, Autoplay]}
+      >
+        <AnimatePresence mode="wait">
+          {DATA.map((item, index) => (
+            <SwiperSlide key={index}>
+              {({ isActive }) => isActive && <SlideContent item={item} />}
+            </SwiperSlide>
+          ))}
+        </AnimatePresence>
+      </Swiper>
 
-  return DATA.map((item, index) => (
-    <>
-      <Image src={item.image} alt={item.title} className="w-full" />
-
-      <div className={styles.background}>
-        <main className="flex flex-col items-center gap-5 text-center text-white">
-          <h1 className="text-[clamp(4.75rem,3.3184rem+2.2346vw,6rem)] font-extrabold capitalize leading-none text-white">
-            We Want To Be
-            <br />
-            Your Best Partner.
-          </h1>
-        </main>
-        <ListServiceCard />
-      </div>
-    </>
-  ));
+      <ListOfferCard />
+    </div>
+  );
 };
