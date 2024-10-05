@@ -14,14 +14,14 @@ export const SectionOffer = ({ rtl }: Props) => {
       <Container
         size={'lg'}
         className={twMerge(
-          'flex w-full items-center justify-between py-10',
+          'flex w-full items-center justify-between pb-14 pt-10',
           rtl ? 'flex-row-reverse' : 'flex-row',
         )}
       >
         <div className={twMerge('flex flex-col text-white', rtl ? 'items-end' : 'items-start')}>
           <h2 className="text-base font-semibold">OFFER</h2>
           <h1 className="mt-2 text-6xl font-bold">Get to know our offer</h1>
-          <p className="font-rubik mt-4 text-base">
+          <p className="mt-4 font-rubik text-base">
             Let us be your strategic partner in providing efficient logistics tailored to your
             needs.
           </p>

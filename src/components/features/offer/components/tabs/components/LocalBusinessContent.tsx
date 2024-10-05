@@ -7,14 +7,13 @@ import { useInView } from 'react-intersection-observer';
 import { twMerge } from 'tailwind-merge';
 
 interface Props {
-  rtl?: boolean;
   subtitle: string;
   title: string;
   description: string;
   image: string;
 }
 
-export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Props) => {
+export const LocalBusinessContent = ({ description, image, subtitle, title }: Props) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -24,24 +23,25 @@ export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Pro
     <div
       ref={ref}
       className={twMerge(
-        'transition-background flex min-h-[41.2rem] flex-col justify-center overflow-hidden rounded-[40px] p-[30px] shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300',
-        rtl ? 'items-end' : 'items-start',
+        'transition-background flex justify-center gap-5 overflow-hidden rounded-[40px] bg-white p-[30px] shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300',
       )}
     >
-      <h2 className="text-[clamp(1rem,0.7137rem+0.4469vw,1.25rem)] font-semibold uppercase tracking-normal text-primary">
-        {subtitle}
-      </h2>
-      <h1 className="text-[clamp(3.375rem,2.6592rem+1.1173vw,4rem)] font-bold uppercase text-primary">
-        {title}
-      </h1>
-      <p className="mt-4 text-justify font-rubik text-[clamp(0.875rem,0.5887rem+0.4469vw,1.125rem)] text-[#7A7A7A]">
-        {description}
-      </p>
+      <div className="flex flex-1 flex-col p-2">
+        <h2 className="text-[clamp(1rem,0.7137rem+0.4469vw,1.25rem)] font-semibold uppercase tracking-normal text-primary">
+          {subtitle}
+        </h2>
+        <h1 className="text-[clamp(3.375rem,2.6592rem+1.1173vw,4rem)] font-bold leading-[1] text-primary">
+          {title}
+        </h1>
+        <p className="mt-4 text-justify font-rubik text-[clamp(0.875rem,0.5887rem+0.4469vw,1.125rem)] text-[#7A7A7A]">
+          {description}
+        </p>
+      </div>
       <motion.div
         initial={{ opacity: 0, y: 200 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 200 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
-        className="mt-10 w-full"
+        className="w-full flex-1 p-2"
       >
         <Image
           src={image}

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { CountUpCountries } from '../../CountUpCountries';
 
-export const Right = () => {
+export const Left = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -36,7 +36,7 @@ export const Right = () => {
   };
 
   return (
-    <div className="flex gap-5" ref={ref}>
+    <div className="flex flex-row-reverse gap-5" ref={ref}>
       <motion.div
         className="flex flex-col justify-center gap-5"
         initial="hidden"
@@ -46,7 +46,7 @@ export const Right = () => {
         <motion.div variants={itemVariants}>
           <Image
             src={
-              'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-695-66462d9919472-qo93usplrm5772m1rns01tac9xks72yvz54w4dew8k.webp'
+              'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-666988655955-664659e347fa1-qo9c2wt8rpi2oqhno5ny1l8x8s2i2fir0rqjrgd22c.webp'
             }
             alt="About us"
             width={500}
@@ -60,26 +60,15 @@ export const Right = () => {
       </motion.div>
       <div className="relative">
         <Image
-          src={'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-69-664629c54befc.webp'}
+          src={
+            'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-66698865595-664659e347fc7-qo9c2xr14re232b92lfy27gyskjs7ne0adby0qobdm.webp'
+          }
           alt="About us"
           width={500}
           height={500}
           priority
           className="h-full max-w-[320px] rounded-[30px] object-cover"
         />
-
-        <div className="absolute left-1/2 top-[73%] flex w-[90%] -translate-x-1/2 items-center justify-center rounded-[30px] bg-[#F7F8FF8A] p-4">
-          <Image
-            src={
-              'https://yourbestpartner.eu/wp-content/uploads/2024/05/logo-pets-dark-cmyk-664629c564430-1024x422.webp'
-            }
-            alt="About us"
-            width={500}
-            height={500}
-            priority
-            className="h-full w-[90%] rounded-[30px] object-cover"
-          />
-        </div>
       </div>
     </div>
   );
