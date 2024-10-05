@@ -1,10 +1,12 @@
 'use client';
 
-import React, { CSSProperties, PropsWithChildren } from 'react';
+import React, { ButtonHTMLAttributes, CSSProperties, PropsWithChildren } from 'react';
 import { Button, ButtonProps, ButtonVariant } from '@mantine/core';
 import { tss } from '@libs/utils/tss-style';
 
-interface Props extends ButtonProps {}
+type ButtonAttributes = Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonProps>;
+
+interface Props extends ButtonProps, ButtonAttributes {}
 
 const cssDefault = {
   gradientBorderRefill: {

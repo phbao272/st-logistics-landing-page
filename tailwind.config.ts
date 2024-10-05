@@ -28,6 +28,9 @@ const config: Config = {
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
       },
+      ringColor: {
+        primary: '#1B264A',
+      },
     },
     container: {
       padding: '1rem',
