@@ -29,6 +29,9 @@ const config: Config = {
         rubik: ['Rubik', 'sans-serif'],
       },
     },
+    container: {
+      padding: '1rem',
+    },
   },
   plugins: [
     plugin(function ({ addUtilities }) {

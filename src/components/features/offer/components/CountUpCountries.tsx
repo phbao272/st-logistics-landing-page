@@ -1,3 +1,5 @@
+'use client';
+
 import { mergeRefs } from '@mantine/hooks';
 import { useInView } from 'react-intersection-observer';
 import React, { useEffect } from 'react';
