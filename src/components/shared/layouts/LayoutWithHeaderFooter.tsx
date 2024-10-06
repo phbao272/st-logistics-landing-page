@@ -1,7 +1,6 @@
 'use client';
 
 import { AppShell, AppShellMain } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 import React from 'react';
 import { MainPaper } from './main-paper';
 import { Header } from './header';
@@ -13,13 +12,11 @@ interface LayoutProps {
 }
 
 export const LayoutWithHeaderFooter = ({ children }: LayoutProps) => {
-  const [opened, { toggle }] = useDisclosure(false);
-
   return (
     <>
-      <AppShell header={{ height: 90 }} layout="alt">
+      <AppShell header={{ height: 90 }} layout="alt" className="overflow-hidden">
         <AppShell.Header className="border-none bg-transparent">
-          <Header toggle={toggle} opened={opened} />
+          <Header />
         </AppShell.Header>
 
         <AppShellMain className={classes.layout}>

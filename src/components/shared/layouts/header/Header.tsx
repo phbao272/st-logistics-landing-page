@@ -9,38 +9,20 @@ import { MainContainer } from '@shared/layouts';
 import React from 'react';
 import { ButtonCustom } from '../../buttons';
 import { IconMail, IconPhone } from '@tabler/icons-react';
-// import LogoSvg from '@/assets/svgs/logo.svg';
+import { DrawerHeader } from './components';
 
-interface Props {
-  toggle?: () => void;
-  opened?: boolean;
-}
-
-const HEADER = [
-  {
-    title: 'Trang chủ',
-    href: '/',
-  },
-  {
-    title: 'Đặt hàng',
-    href: '/dat-hang',
-  },
-  {
-    title: 'Mã vận đơn',
-    href: '/ma-van-don',
-  },
-  {
-    title: 'Chính sách',
-    href: '/chinh-sach',
-  },
+export const HEADER = [
+  { title: 'Trang chủ', href: '/' },
+  { title: 'Đặt hàng', href: '/dat-hang' },
+  { title: 'Mã vận đơn', href: '/ma-van-don' },
+  { title: 'Chính sách', href: '/chinh-sach' },
 ];
 
-export function Header({ opened, toggle }: Props) {
+export function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const { classes, cx } = useStyles({
-    headerScrolled: scrolled,
-  });
+  const [drawerOpened, setDrawerOpened] = useState(false);
+  const { classes, cx } = useStyles({ headerScrolled: scrolled });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,56 +33,54 @@ export function Header({ opened, toggle }: Props) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleDrawer = () => setDrawerOpened((o) => !o);
+
   return (
-    <header className={cx(classes.header, { [classes.headerScrolled]: scrolled })}>
-      <MainContainer>
-        <Group
-          h="100%"
-          px="md"
-          style={{
-            width: '100%',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}
-        >
-          <Link href={'/'}>
-            <Image
-              src={
-                'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
-              }
-              alt="logo"
-              className={classes.logo}
+    <>
+      <header className={cx(classes.header, { [classes.headerScrolled]: scrolled })}>
+        <MainContainer>
+          <Group h="100%" px="md" className={classes.headerContent}>
+            <Link href={'/'}>
+              <Image
+                src={
+                  'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
+                }
+                alt="logo"
+                className={classes.logo}
+              />
+            </Link>
+
+            <Flex className={classes.desktopMenu}>
+              {HEADER.map((item, index) => (
+                <Link
+                  href={item.href}
+                  key={index}
+                  prefetch
+                  className={`${classes.headerNavLink} ${pathname === `${item.href}/` || pathname === `${item.href}` ? 'active' : ''}`}
+                >
+                  {item.title}
+                </Link>
+              ))}
+              <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
+                <IconPhone size={20} />
+              </ButtonCustom>
+              <ButtonCustom className="w-fit" size="lg" rightSection={<IconMail size={20} />}>
+                Get a quote
+              </ButtonCustom>
+            </Flex>
+
+            <Burger
+              opened={drawerOpened}
+              onClick={toggleDrawer}
+              className={classes.burger}
+              size="sm"
             />
-          </Link>
+          </Group>
+        </MainContainer>
+      </header>
 
-          <Flex
-            style={{
-              gap: 40,
-              alignItems: 'center',
-            }}
-          >
-            {HEADER.map((item, index) => (
-              <Link
-                href={item.href}
-                key={index}
-                prefetch
-                className={`${classes.headerNavLink} ${pathname === `${item.href}/` || pathname === `${item.href}` ? 'active' : ''}`}
-              >
-                {item.title}
-              </Link>
-            ))}
-            <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
-              <IconPhone size={20} />
-            </ButtonCustom>
-            <ButtonCustom className="w-fit" size="lg" rightSection={<IconMail size={20} />}>
-              Get a quote
-            </ButtonCustom>
-          </Flex>
-
-          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        </Group>
-      </MainContainer>
-    </header>
+      <DrawerHeader drawerOpened={drawerOpened} toggleDrawer={toggleDrawer} />
+    </>
   );
 }
 
@@ -115,6 +95,21 @@ const useStyles = tss.withParams<{ headerScrolled: boolean }>().create(({ header
 
   headerScrolled: {
     backgroundColor: '#1B264A',
+  },
+
+  headerContent: {
+    width: '100%',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  desktopMenu: {
+    gap: 40,
+    alignItems: 'center',
+
+    '@media (max-width: 1024px)': {
+      display: 'none',
+    },
   },
 
   headerNavLink: {
@@ -156,5 +151,19 @@ const useStyles = tss.withParams<{ headerScrolled: boolean }>().create(({ header
   logo: {
     height: headerScrolled ? 25 : 30,
     transition: 'height 0.3s ease',
+  },
+
+  burger: {
+    display: 'none',
+
+    '@media (max-width: 1024px)': {
+      backgroundColor: 'white',
+      borderRadius: 12,
+      width: 44,
+      height: 44,
+      justifyContent: 'center',
+      alignItems: 'center',
+      display: 'flex',
+    },
   },
 }));
