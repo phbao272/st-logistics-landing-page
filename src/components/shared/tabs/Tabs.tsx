@@ -79,11 +79,6 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
       orientation="vertical"
       placement={placement}
       className="gap-[30px] rounded-[30px] bg-white p-[30px]"
-      styles={{
-        list: {
-          border: 'none',
-        },
-      }}
     >
       <Tabs.List className={classes.list}>
         {options.map((option, index) => (
@@ -119,7 +114,7 @@ const useStyles = tss.withParams<{ placement: PlacementType }>().create(({ place
     width: '100%',
     maxWidth: '350px',
     gap: '20px',
-    border: '1px solid red',
+    flex: 1,
   },
 
   list_top: {
