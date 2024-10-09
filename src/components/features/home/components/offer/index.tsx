@@ -29,7 +29,10 @@ export const Offer = () => {
   return (
     <>
       <div className="relative bg-primary pb-[100px] pt-[80px]">
-        <Container size={'xl'} className="flex items-center justify-between">
+        <Container
+          size={'xl'}
+          className="flex flex-col items-center justify-between gap-5 md:flex-row md:gap-0"
+        >
           <div className="flex flex-col items-start text-white">
             <h2 className="text-base font-semibold">OFFER</h2>
             <h1 className="mt-2 text-6xl font-bold">Get to know our offer</h1>
@@ -41,7 +44,7 @@ export const Offer = () => {
 
           <ButtonCustom
             variant="transparent"
-            className="w-fit"
+            className="w-fit self-end"
             size="xl"
             rightSection={<IconArrowUpRight size={20} />}
           >
@@ -50,7 +53,7 @@ export const Offer = () => {
 
           <Container
             size={'xl'}
-            className="absolute bottom-[0] left-1/2 mt-12 grid w-full -translate-x-1/2 translate-y-[82%] grid-cols-1 gap-8 md:grid-cols-3"
+            className="absolute bottom-[-40%] left-1/2 mt-12 grid w-full -translate-x-1/2 translate-y-[82%] grid-cols-1 gap-8 md:bottom-0 md:grid-cols-3"
           >
             {CARDS.map((card, index) => (
               <MotionCard key={index} {...card} index={index} />
@@ -58,7 +61,7 @@ export const Offer = () => {
           </Container>
         </Container>
       </div>
-      <div className="h-[300px] w-full" />
+      <div className="xl:h[300px] h-[1200px] w-full md:h-[400px] lg:h-[400px]" />
     </>
   );
 };

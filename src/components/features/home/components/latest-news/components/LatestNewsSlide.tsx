@@ -44,7 +44,7 @@ export const LatestNewsSlide = () => {
         height: '100%',
       }}
       pagination={pagination}
-      className="p-[40px]"
+      className="p-3 md:p-10"
       loop={true}
       autoplay={{
         delay: 5000,

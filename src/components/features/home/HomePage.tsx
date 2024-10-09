@@ -1,20 +1,20 @@
 import React from 'react';
 import {
-  Introduction,
-  Slide,
   AboutUs,
-  Offer,
-  WhyUs,
   BackgroundIntro,
-  LatestNews,
   ContactUs,
+  Introduction,
+  LatestNews,
+  Offer,
+  Slide,
+  WhyUs,
 } from './components';
 
 export const HomePage = () => {
   return (
     <>
       <Introduction />
-      <div className="h-[200px]" />
+      <div className="h-[600px] w-full md:h-[200px]" />
       <AboutUs />
       <Offer />
       <Slide />

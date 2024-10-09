@@ -11,7 +11,8 @@ interface Props {
 }
 
 export const AnimatedText = ({ text, delay = 0.15, className }: Props) => {
-  const letters = Array.from(text);
+  // Chia văn bản thành các từ, giữ nguyên khoảng trắng và dấu câu
+  const words = text.split(/(\s+)/);
 
   const container = {
     hidden: { opacity: 0 },
@@ -21,7 +22,14 @@ export const AnimatedText = ({ text, delay = 0.15, className }: Props) => {
     }),
   };
 
-  const child = {
+  const wordVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: delay / 2 },
+    },
+  };
+
+  const letter = {
     visible: {
       opacity: 1,
       x: 0,
@@ -45,17 +53,21 @@ export const AnimatedText = ({ text, delay = 0.15, className }: Props) => {
   };
 
   return (
-    <motion.p
-      className={twMerge('flex justify-center', className)}
+    <motion.div
+      className={twMerge('flex flex-wrap justify-center', className)}
       variants={container}
       initial="hidden"
       animate="visible"
     >
-      {letters.map((letter, index) => (
-        <motion.span variants={child} key={index}>
-          {letter === ' ' ? '\u00A0' : letter}
+      {words.map((word, index) => (
+        <motion.span key={index} variants={wordVariants} className="inline-block whitespace-pre">
+          {Array.from(word).map((char, charIndex) => (
+            <motion.span key={charIndex} variants={letter} className="inline-block">
+              {char === ' ' ? '\u00A0' : char}
+            </motion.span>
+          ))}
         </motion.span>
       ))}
-    </motion.p>
+    </motion.div>
   );
 };

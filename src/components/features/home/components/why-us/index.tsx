@@ -14,8 +14,8 @@ export const WhyUs = () => {
         Full commitment regardless of the size of the order. This approach allows us to meet the
         expectations of even the most demanding customers.
       </p>
-      <div className="flex justify-center space-x-8">
-        <div className="max-w-xs">
+      <div className="flex-responsive justify-center gap-10 md:gap-8">
+        <div className="basis-4/12">
           <div className="relative mb-8">
             <Image
               src={WorldSvg.src}
@@ -29,7 +29,7 @@ export const WhyUs = () => {
             to production plants and storage warehouses.
           </p>
         </div>
-        <div className="max-w-xs">
+        <div className="basis-4/12">
           <div className="relative mb-8">
             <Image
               src={BoxSvg.src}
@@ -43,7 +43,7 @@ export const WhyUs = () => {
             tailor-made solutions that are best for their business, not our convenience.
           </p>
         </div>
-        <div className="max-w-xs">
+        <div className="basis-4/12">
           <div className="relative mb-8">
             <Image
               src={TruckSvg.src}

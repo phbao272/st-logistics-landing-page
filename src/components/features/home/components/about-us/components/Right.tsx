@@ -39,7 +39,7 @@ export const Right = () => {
 
   return (
     <div className="flex flex-col gap-5 px-3 pt-4">
-      <p className="text-[18px] font-semibold uppercase text-primary">about us</p>
+      <p className="text-base font-semibold uppercase text-primary md:text-[18px]">about us</p>
       <div className="flex flex-col gap-0">
         <b className="text-4xl text-[#3E3F41]">Logistics with passion,</b>
         <span className="text-4xl font-medium text-[#3E3F41]">partnership with commitment.</span>
@@ -65,11 +65,13 @@ export const Right = () => {
           variants={itemVariants}
           className="rounded-[30px] border-r-[8px] border-solid border-r-[#455589] bg-white p-[10px] shadow-[0px_0px_31px_-12px_rgba(0,0,0,0.5)]"
         >
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col gap-3 md:flex-row md:items-center">
             <Image width={100} height={100} src={PhilosophySvg.src} alt="Our philosophy" />
 
             <div className="flex flex-col gap-1">
-              <p className="text-2xl font-bold uppercase">Our philosophy</p>
+              <p className="text-xl font-bold uppercase text-[#455589] md:text-2xl">
+                Our philosophy
+              </p>
               <p className="text-justify font-serif">
                 We believe in business with a human face. You can run a business on a partnership
                 basis, taking care of relationships with both clients and employees. We are

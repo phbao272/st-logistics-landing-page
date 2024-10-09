@@ -28,8 +28,8 @@ body {
     text-wrap: balance;
   }
 
-  .test {
-    color: red;
+  .flex-responsive {
+    @apply flex flex-col md:flex-row;
   }
 }
 

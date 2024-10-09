@@ -9,6 +9,7 @@
   background-size: cover;
   color: #fff;
   position: relative;
+  padding: 1rem; /* Thêm khoảng padding để tạo không gian trên màn hình nhỏ */
 }
 
 .video {

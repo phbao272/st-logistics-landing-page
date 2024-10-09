@@ -31,6 +31,7 @@ const config: Config = {
       ringColor: {
         primary: '#1B264A',
       },
+     
     },
     container: {
       padding: '1rem',

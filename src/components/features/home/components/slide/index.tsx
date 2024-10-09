@@ -14,7 +14,7 @@ const DATA = [
 
 export const Slide = () => {
   return (
-    <div className="p-[80px]">
+    <div className="p-[60px_16px_16px] md:p-[80px]">
       <Swiper
         hideNavigation={true}
         style={{
