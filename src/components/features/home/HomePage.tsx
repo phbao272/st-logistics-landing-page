@@ -14,7 +14,7 @@ export const HomePage = () => {
   return (
     <>
       <Introduction />
-      <div className="h-[600px] w-full md:h-[200px]" />
+      <div className="h-[600px] w-full md:h-[300px] lg:h-[200px]" />
       <AboutUs />
       <Offer />
       <Slide />
