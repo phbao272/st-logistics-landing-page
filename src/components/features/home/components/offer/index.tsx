@@ -61,7 +61,7 @@ export const Offer = () => {
           </Container>
         </Container>
       </div>
-      <div className="xl:h[300px] h-[1200px] w-full md:h-[400px] lg:h-[400px]" />
+      <div className="xl:h[300px] h-[1250px] w-full md:h-[400px] lg:h-[400px]" />
     </>
   );
 };

@@ -20,7 +20,7 @@ const DATA = [
 
 export const BackgroundIntro = () => {
   return (
-    <div className="relative min-h-[50rem] bg-[url('https://yourbestpartner.eu/wp-content/uploads/2024/05/img-6-6635e9409b19a.webp')] bg-cover bg-fixed bg-center bg-no-repeat lg:min-h-[46.188rem]">
+    <div className="relative min-h-[50rem] bg-[url('https://yourbestpartner.eu/wp-content/uploads/2024/05/img-6-6635e9409b19a.webp')] bg-cover bg-center bg-no-repeat md:bg-fixed lg:min-h-[46.188rem]">
       <div className="absolute inset-0 bg-primary opacity-30" />
       <div className="max-w-[clamp(62.5rem, 41.7423rem + 32.4022vw, 80.625rem)] z-10 flex h-full min-h-[50rem] flex-col items-center justify-center px-4 py-8 text-[#F5F5F5] lg:min-h-[46.188rem]">
         <h1 className="z-10 mb-4 text-4xl font-bold md:text-6xl">

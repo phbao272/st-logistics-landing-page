@@ -4,7 +4,7 @@ import React from 'react';
 
 export const ContactUs = () => {
   return (
-    <div className="relative min-h-[33.688rem] bg-[url('https://yourbestpartner.eu/wp-content/uploads/2024/05/img-1554-6635efca100fa.webp')] bg-cover bg-fixed bg-center bg-no-repeat">
+    <div className="relative min-h-[33.688rem] bg-[url('https://yourbestpartner.eu/wp-content/uploads/2024/05/img-1554-6635efca100fa.webp')] bg-cover bg-center bg-no-repeat md:bg-fixed">
       <div className="absolute inset-0 bg-primary opacity-[0.48] mix-blend-normal" />
       <div className="max-w-[clamp(62.5rem, 41.7423rem + 32.4022vw, 80.625rem)] z-10 flex h-full min-h-[33.688rem] flex-col items-center justify-center p-4 text-[#F5F5F5]">
         <h1 className="z-10 mb-4 text-center text-4xl font-bold md:text-6xl">

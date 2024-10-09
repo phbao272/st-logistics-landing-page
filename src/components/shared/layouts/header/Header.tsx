@@ -10,6 +10,7 @@ import React from 'react';
 import { ButtonCustom } from '../../buttons';
 import { IconMail, IconPhone } from '@tabler/icons-react';
 import { DrawerHeader } from './components';
+import { twMerge } from 'tailwind-merge';
 
 export const HEADER = [
   { title: 'Trang chủ', href: '/' },
@@ -46,7 +47,7 @@ export function Header() {
                   'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
                 }
                 alt="logo"
-                className={classes.logo}
+                className={twMerge(classes.logo)}
               />
             </Link>
 
@@ -151,6 +152,8 @@ const useStyles = tss.withParams<{ headerScrolled: boolean }>().create(({ header
   logo: {
     height: headerScrolled ? 25 : 30,
     transition: 'height 0.3s ease',
+    objectFit: 'contain',
+    width: 'auto',
   },
 
   burger: {
