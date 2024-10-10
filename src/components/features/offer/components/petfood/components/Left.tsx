@@ -15,10 +15,11 @@ export const Left = () => {
     <div className="relative flex flex-col gap-5 px-3 pt-4">
       <p className="text-[18px] font-semibold uppercase text-primary">Transport of PETFOOD</p>
       <div className="flex flex-col gap-0">
-        <b className="text-7xl text-primary">Professional transport</b>
-        <span className="text-7xl font-medium text-primary">of petfood</span>
+        <h2 className="text-[40px] leading-none text-primary md:text-[4rem] lg:text-7xl">
+          <b>Professional transport</b> of petfood
+        </h2>
       </div>
-      <p className={twMerge('font-rubik mb-4 text-justify', rubik.className)}>
+      <p className={twMerge('mb-4 text-justify font-rubik', rubik.className)}>
         We know everything about the broadly understood transport of pet food. We have many years of
         experience, developed <em>know-how</em>, a team of experts and the necessary knowledge. By
         deciding to cooperate with us, you are taking the first step towards efficient, safe and

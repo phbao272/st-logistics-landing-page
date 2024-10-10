@@ -46,7 +46,7 @@ export const LocalBusinessContent = ({ description, image, subtitle, title }: Pr
         <Image
           src={image}
           alt={title}
-          className="h-auto w-full rounded-[30px] border-none shadow-none"
+          className="aspect-[16/9] h-auto w-full rounded-[30px] border-none shadow-none"
         />
       </motion.div>
     </div>

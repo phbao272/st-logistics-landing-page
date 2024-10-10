@@ -31,7 +31,7 @@ export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Pro
       <h2 className="text-[clamp(1rem,0.7137rem+0.4469vw,1.25rem)] font-semibold uppercase tracking-normal text-primary">
         {subtitle}
       </h2>
-      <h1 className="text-[clamp(3.375rem,2.6592rem+1.1173vw,4rem)] font-bold uppercase text-primary">
+      <h1 className="text-[40px] font-bold uppercase text-primary md:text-[clamp(3.375rem,2.6592rem+1.1173vw,4rem)]">
         {title}
       </h1>
       <p className="mt-4 text-justify font-rubik text-[clamp(0.875rem,0.5887rem+0.4469vw,1.125rem)] text-[#7A7A7A]">
@@ -46,7 +46,7 @@ export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Pro
         <Image
           src={image}
           alt={title}
-          className="h-auto w-full rounded-[30px] border-none shadow-none"
+          className="aspect-[16/9] h-auto w-full rounded-[30px] border-none shadow-none"
         />
       </motion.div>
     </div>

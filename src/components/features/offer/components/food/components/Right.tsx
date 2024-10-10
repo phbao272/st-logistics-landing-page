@@ -15,7 +15,7 @@ export const Right = () => {
     <div className="relative flex flex-col gap-5 px-3 pt-4">
       <p className="text-[18px] font-semibold uppercase text-primary">Transport of PETFOOD</p>
       <div className="flex flex-col gap-0">
-        <h2 className="text-[40px] text-primary md:text-[4rem] lg:text-7xl">
+        <h2 className="text-[40px] text-primary md:text-[4rem] lg:text-7xl leading-none">
           <b>Comprehensive,</b> safe, profitable
         </h2>
       </div>

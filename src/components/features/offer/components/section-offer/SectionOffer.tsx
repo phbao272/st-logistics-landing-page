@@ -20,7 +20,14 @@ export const SectionOffer = ({ rtl }: Props) => {
       >
         <div className={twMerge('flex flex-col text-white', rtl ? 'items-end' : 'items-start')}>
           <h2 className="text-base font-semibold">OFFER</h2>
-          <h1 className="mt-2 text-[40px] font-bold md:text-6xl">Get to know our offer</h1>
+          <h1
+            className={twMerge(
+              'mt-2 text-[40px] font-bold leading-none md:text-6xl',
+              rtl ? 'text-right' : 'text-left',
+            )}
+          >
+            Get to know our offer
+          </h1>
           <p className={twMerge('mt-4 font-rubik text-base', rtl ? 'text-right' : 'text-left')}>
             Let us be your strategic partner in providing efficient logistics tailored to your
             needs.
