@@ -23,14 +23,14 @@ export const LocalBusinessContent = ({ description, image, subtitle, title }: Pr
     <div
       ref={ref}
       className={twMerge(
-        'transition-background flex justify-center gap-5 overflow-hidden rounded-[40px] bg-white p-[30px] shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300',
+        'transition-background flex flex-col-reverse justify-center gap-5 overflow-hidden rounded-[40px] bg-white p-3 shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300 md:p-[30px] lg:flex-row',
       )}
     >
       <div className="flex flex-1 flex-col p-2">
         <h2 className="text-[clamp(1rem,0.7137rem+0.4469vw,1.25rem)] font-semibold uppercase tracking-normal text-primary">
           {subtitle}
         </h2>
-        <h1 className="text-[clamp(3.375rem,2.6592rem+1.1173vw,4rem)] font-bold leading-[1] text-primary">
+        <h1 className="text-[40px] font-bold leading-[1] text-primary md:text-[clamp(3.375rem,2.6592rem+1.1173vw,4rem)]">
           {title}
         </h1>
         <p className="mt-4 text-justify font-rubik text-[clamp(0.875rem,0.5887rem+0.4469vw,1.125rem)] text-[#7A7A7A]">

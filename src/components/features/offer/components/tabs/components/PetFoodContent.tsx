@@ -24,7 +24,7 @@ export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Pro
     <div
       ref={ref}
       className={twMerge(
-        'transition-background flex min-h-[41.2rem] flex-col justify-center overflow-hidden rounded-[40px] p-[30px] shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300',
+        'transition-background flex min-h-[41.2rem] flex-col justify-center overflow-hidden rounded-[40px] p-3 shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300 md:p-[30px]',
         rtl ? 'items-end' : 'items-start',
       )}
     >

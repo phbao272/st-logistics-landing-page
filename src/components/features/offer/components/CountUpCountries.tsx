@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import React, { useEffect } from 'react';
 import { useCountUp } from 'react-countup';
 import { motion, Variants } from 'framer-motion';
-import Image from 'next/image';
+import { Image } from '@mantine/core';
 
 export const CountUpCountries = () => {
   const [ref, inView] = useInView({
@@ -49,13 +49,10 @@ export const CountUpCountries = () => {
         <Image
           src={'https://yourbestpartner.eu/wp-content/uploads/2024/05/icon-map-66462899cefa9.webp'}
           alt="About us"
-          width={500}
-          height={500}
-          priority
-          className="w-full max-w-[220px] rounded-[30px] object-cover"
+          className="inline-block w-full rounded-[30px] object-cover align-middle"
         />
       </motion.div>
-      <div className="absolute left-1/2 top-[5px] z-10 -translate-x-1/2">
+      <div className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 lg:top-[5px] lg:translate-y-0">
         <div className="flex items-center justify-center">
           <div
             className="text-[64px] font-semibold text-primary"

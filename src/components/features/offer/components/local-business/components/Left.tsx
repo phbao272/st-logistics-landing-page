@@ -51,7 +51,7 @@ export const Left = () => {
           className="h-auto w-full rounded-[30px] object-cover"
         />
       </motion.div>
-      <div className="flex gap-5">
+      <div className="flex-responsive gap-5">
         <motion.div variants={itemVariants}>
           <Image
             src={'https://yourbestpartner.eu/wp-content/uploads/2024/05/12-66468c3e1e0a4.webp'}

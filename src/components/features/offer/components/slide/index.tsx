@@ -48,7 +48,7 @@ const SlideContent = ({ item }: { item: (typeof DATA)[0] }) => (
       />
       <main className="z-10 flex max-w-[80%] flex-col items-center gap-5 pb-6 text-center text-white">
         <motion.h1
-          className="text-[clamp(4.75rem,3.3184rem+2.2346vw,6rem)] font-extrabold uppercase leading-none text-white"
+          className="text-[3rem] font-extrabold uppercase leading-none text-white lg:text-[4rem] xl:text-[clamp(4.75rem,3.3184rem+2.2346vw,6rem)]"
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: 'linear' }}
@@ -70,28 +70,31 @@ const SlideContent = ({ item }: { item: (typeof DATA)[0] }) => (
 
 export const Slide = () => {
   return (
-    <div className="relative">
-      <Swiper
-        spaceBetween={30}
-        loop
-        autoplay={{
-          delay: 10000,
-          disableOnInteraction: false,
-        }}
-        effect={'fade'}
-        grabCursor
-        modules={[EffectFade, Autoplay]}
-      >
-        <AnimatePresence mode="wait">
-          {DATA.map((item, index) => (
-            <SwiperSlide key={index}>
-              {({ isActive }) => isActive && <SlideContent item={item} />}
-            </SwiperSlide>
-          ))}
-        </AnimatePresence>
-      </Swiper>
+    <>
+      <div className="relative">
+        <Swiper
+          spaceBetween={30}
+          loop
+          autoplay={{
+            delay: 10000,
+            disableOnInteraction: false,
+          }}
+          effect={'fade'}
+          grabCursor
+          modules={[EffectFade, Autoplay]}
+        >
+          <AnimatePresence mode="wait">
+            {DATA.map((item, index) => (
+              <SwiperSlide key={index}>
+                {({ isActive }) => isActive && <SlideContent item={item} />}
+              </SwiperSlide>
+            ))}
+          </AnimatePresence>
+        </Swiper>
 
-      <ListOfferCard />
-    </div>
+        <ListOfferCard />
+      </div>
+      <div className="h-[500px] md:h-0" />
+    </>
   );
 };

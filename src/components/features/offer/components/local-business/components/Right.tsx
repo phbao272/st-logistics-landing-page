@@ -15,8 +15,9 @@ export const Right = () => {
     <div className="relative flex flex-col gap-5 px-3 pt-4">
       <p className="text-[18px] font-semibold uppercase text-primary">Local business</p>
       <div className="flex flex-col gap-0">
-        <b className="text-7xl text-primary">We believe in close</b>
-        <span className="text-7xl font-medium text-primary">local cooperation.</span>
+        <h2 className="text-[40px] leading-none text-primary md:text-[4rem] lg:text-7xl">
+          <b>We believe in close</b> local cooperation.
+        </h2>
       </div>
       <p className={twMerge('mb-4 text-justify font-rubik', rubik.className)}>
         We are perfectly aware of the effort you have to devote every day to develop your

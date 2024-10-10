@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Tabs } from '@mantine/core';
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 import { tss } from '@/libs/utils/tss-style';
+import React from 'react';
 
 export interface IOptionTab {
   title: string;
@@ -44,25 +45,36 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
         value={value}
         onChange={setValue}
         variant="none"
-        className="gap-5 rounded-[30px] bg-primary p-[30px]"
+        className="gap-5 rounded-[30px] bg-primary p-3 md:p-[30px]"
       >
         <Tabs.List className={classes.list_top}>
           {options.map((option, index) => (
-            <Tabs.Tab
-              value={String(index + 1)}
-              ref={setControlRef(String(index + 1))}
-              className={classes.tab}
-              key={option.title}
-              {...sections[placement]}
-            >
-              {option.title}
-            </Tabs.Tab>
+            <React.Fragment key={option.title}>
+              <Tabs.Tab
+                value={String(index + 1)}
+                ref={setControlRef(String(index + 1))}
+                className={classes.tab}
+                {...sections[placement]}
+              >
+                {option.title}
+              </Tabs.Tab>
+
+              {value === String(index + 1) ? (
+                <Tabs.Panel
+                  className="block lg:hidden"
+                  value={String(index + 1)}
+                  key={option.title}
+                >
+                  {option.content}
+                </Tabs.Panel>
+              ) : null}
+            </React.Fragment>
           ))}
         </Tabs.List>
 
         {options.map((option, index) =>
           value === String(index + 1) ? (
-            <Tabs.Panel value={String(index + 1)} key={option.title}>
+            <Tabs.Panel className="hidden lg:block" value={String(index + 1)} key={option.title}>
               {option.content}
             </Tabs.Panel>
           ) : null,
@@ -78,25 +90,38 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
       onChange={setValue}
       orientation="vertical"
       placement={placement}
-      className="gap-[30px] rounded-[30px] bg-white p-[30px]"
+      className="gap-[30px] rounded-[30px] bg-white p-3 md:p-[30px]"
     >
       <Tabs.List className={classes.list}>
-        {options.map((option, index) => (
-          <Tabs.Tab
-            value={String(index + 1)}
-            ref={setControlRef(String(index + 1))}
-            className={classes.tab}
-            key={option.title}
-            {...sections[placement]}
-          >
-            {option.title}
-          </Tabs.Tab>
-        ))}
+        {options.map((option, index) => {
+          return (
+            <React.Fragment key={option.title}>
+              <Tabs.Tab
+                value={String(index + 1)}
+                ref={setControlRef(String(index + 1))}
+                className={classes.tab}
+                {...sections[placement]}
+              >
+                {option.title}
+              </Tabs.Tab>
+
+              {value === String(index + 1) ? (
+                <Tabs.Panel
+                  className="block lg:hidden"
+                  value={String(index + 1)}
+                  key={option.title}
+                >
+                  {option.content}
+                </Tabs.Panel>
+              ) : null}
+            </React.Fragment>
+          );
+        })}
       </Tabs.List>
 
       {options.map((option, index) =>
         value === String(index + 1) ? (
-          <Tabs.Panel value={String(index + 1)} key={option.title}>
+          <Tabs.Panel className="hidden lg:block" value={String(index + 1)} key={option.title}>
             {option.content}
           </Tabs.Panel>
         ) : null,
@@ -112,9 +137,13 @@ const useStyles = tss.withParams<{ placement: PlacementType }>().create(({ place
     position: 'relative',
     marginBottom: 'var(--mantine-spacing-md)',
     width: '100%',
-    maxWidth: '350px',
     gap: '20px',
     flex: 1,
+    maxWidth: 'unset',
+
+    '@media (min-width: 1024px)': {
+      maxWidth: '350px',
+    },
   },
 
   list_top: {
@@ -123,6 +152,11 @@ const useStyles = tss.withParams<{ placement: PlacementType }>().create(({ place
     alignItems: 'center',
     gap: '20px',
     marginBottom: '49px',
+    flexDirection: 'column',
+
+    '@media (min-width: 1024px)': {
+      flexDirection: 'row',
+    },
   },
 
   tab: {
@@ -136,6 +170,7 @@ const useStyles = tss.withParams<{ placement: PlacementType }>().create(({ place
     fontSize: '16px',
     textAlign: 'start',
     textTransform: 'uppercase',
+    width: '100%',
 
     '&[data-active]': {
       backgroundColor: placement === 'top' ? '#455589' : '#1b264a',
@@ -149,6 +184,10 @@ const useStyles = tss.withParams<{ placement: PlacementType }>().create(({ place
       boxShadow: '0px 0px 40px -13px rgba(0, 0, 0, 0.5)',
       color: placement === 'top' ? '#fff' : '#f7f8ff',
       transform: 'translateY(-5px)',
+    },
+
+    '@media (min-width: 1024px)': {
+      width: 'fit-content',
     },
   },
 }));

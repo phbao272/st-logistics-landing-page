@@ -43,7 +43,7 @@ export const ListOfferCard = () => {
     <Container
       size={'lg'}
       className={twMerge(
-        'absolute bottom-[-50px] left-0 right-0 z-10 flex justify-center gap-[50px] px-2',
+        'flex-responsive absolute bottom-[-75%] left-0 right-0 z-10 justify-center gap-5 px-2 md:bottom-[-50px] md:gap-[50px]',
         styles.fadeInUp,
       )}
     >

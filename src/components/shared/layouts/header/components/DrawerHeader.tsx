@@ -35,9 +35,12 @@ export const DrawerHeader = ({ drawerOpened, toggleDrawer }: Props) => {
         duration: 700,
         transition: 'fade-left',
       }}
+      maw={300}
     >
       <Box className={classes.drawerContent}>
-        <Flex justify="space-between" align="center">
+        <IconX onClick={toggleDrawer} size={24} className="absolute right-5 top-5 cursor-pointer" />
+
+        <Flex justify="space-between" align="center" className="pt-12">
           <Image
             src={
               'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
@@ -45,7 +48,6 @@ export const DrawerHeader = ({ drawerOpened, toggleDrawer }: Props) => {
             alt="logo"
             className={classes.drawerLogo}
           />
-          <IconX onClick={toggleDrawer} size={24} style={{ cursor: 'pointer' }} />
         </Flex>
 
         <Text className={classes.drawerTagline}>
@@ -90,6 +92,11 @@ const useStyles = tss.create(() => ({
   drawer: {
     '& .mantine-Drawer-content': {
       backgroundColor: '#1B264A',
+      borderLeftWidth: '10px',
+      borderRadius: '50px 0 0 50px',
+      boxShadow: '2px 8px 23px 3px rgba(0,0,0,0.2)',
+      borderColor: '#F7F8FF',
+      borderStyle: 'double',
     },
   },
 
