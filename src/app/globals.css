@@ -31,6 +31,22 @@ body {
   .flex-responsive {
     @apply flex flex-col md:flex-row;
   }
+
+  .section-title-white {
+    @apply text-center text-2xl capitalize text-white lg:text-3xl;
+  }
+
+  .section-title {
+    @apply text-center text-2xl capitalize text-primary lg:text-3xl;
+  }
+
+  .section-description-white {
+    @apply text-center text-base text-white;
+  }
+
+  .section-description {
+    @apply text-center text-base text-primary;
+  }
 }
 
 .swiper {
