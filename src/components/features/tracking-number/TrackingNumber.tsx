@@ -38,17 +38,17 @@ export const TrackingNumber = () => {
   };
 
   return (
-    <div className="container flex flex-col gap-5">
-      <div className="max-w-6xl rounded-xl p-6">
+    <div className="container mb-[60px] flex flex-col gap-5">
+      <div className="rounded-xl md:max-w-6xl md:p-6">
         <h1 className="mb-6 text-2xl font-bold text-gray-800">Tra cứu vận đơn</h1>
-        <form onSubmit={handleSubmit} className="mb-6">
+        <form onSubmit={handleSubmit} className="md:mb-6">
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <input
               type="text"
               value={trackingNumber}
               onChange={(e) => setTrackingNumber(e.target.value)}
               placeholder="Nhập mã vận đơn"
-              className="focus:ring-primary w-full max-w-md flex-grow self-stretch rounded-xl border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2"
+              className="w-full max-w-md flex-grow self-stretch rounded-xl border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               required
             />
             <ButtonCustom
@@ -69,7 +69,7 @@ export const TrackingNumber = () => {
           dangerouslySetInnerHTML={{
             __html: result,
           }}
-          className="rounded-md bg-gray-100 p-4"
+          className="rounded-md"
         />
       )}
     </div>
