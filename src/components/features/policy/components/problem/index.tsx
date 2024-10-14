@@ -22,10 +22,7 @@ const DATA = [
 
 export const Problem = () => {
   return (
-    <Container
-      size="lg"
-      className="flex w-full flex-col gap-5 pt-[20px] md:pt-[70px] lg:pt-[150px]"
-    >
+    <Container size="lg" className="flex w-full flex-col gap-5 pt-[20px] md:pt-[30px] lg:pt-[40px]">
       <h1 className="section-title">
         Bạn đang gặp
         <span className="block"> những khó khăn nào sau đây?</span>
