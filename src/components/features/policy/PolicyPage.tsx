@@ -1,5 +1,6 @@
 import React from 'react';
 import { Introduction, ServicePrice } from './components';
+import { ContactUs } from '../home/components';
 
 export const PolicyPage = () => {
   return (
@@ -8,6 +9,7 @@ export const PolicyPage = () => {
       {/* <Problem />
       <ListServices /> */}
       <ServicePrice />
+      <ContactUs />
     </div>
   );
 };

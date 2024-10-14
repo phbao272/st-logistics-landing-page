@@ -187,7 +187,7 @@ const useStyles = tss.withParams<{ placement: PlacementType }>().create(({ place
     },
 
     '@media (min-width: 1024px)': {
-      width: 'fit-content',
+      width: placement === 'top' ? 'fit-content' : 'inherit',
     },
   },
 }));
