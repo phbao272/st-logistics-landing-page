@@ -48,6 +48,21 @@ export default function RootLayout({
           as="image"
           href="https://yourbestpartner.eu/wp-content/uploads/2024/05/bg-video-6639c7b0520cd.webp"
         />
+        <link
+          rel="preload"
+          as="image"
+          href="https://yourbestpartner.eu/wp-content/uploads/2024/05/img-66698-66462d09b8d4b.webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="https://yourbestpartner.eu/wp-content/uploads/2024/05/img-022-6645f1e5d22f5.webp"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="https://yourbestpartner.eu/wp-content/uploads/2024/05/img-9-66437d05d04c5.webp"
+        />
       </head>
       <body className={outfit.className}>
         <WebVitals />
