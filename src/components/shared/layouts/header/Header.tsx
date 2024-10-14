@@ -14,7 +14,7 @@ import { twMerge } from 'tailwind-merge';
 
 export const HEADER = [
   { title: 'Trang chủ', href: '/' },
-  { title: 'Đặt hàng', href: '/dat-hang' },
+  { title: 'Bảng giá', href: '/bang-gia' },
   { title: 'Check vận đơn', href: '/check-van-don' },
   { title: 'Chính sách', href: '/chinh-sach' },
 ];
