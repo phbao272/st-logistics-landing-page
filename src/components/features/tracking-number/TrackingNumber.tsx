@@ -15,7 +15,15 @@ export const TrackingNumber = () => {
     mutationKey: ['trackingNumber', trackingNumber],
     mutationFn: async ({ trackingNumber }: { trackingNumber: string }) => {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/ma-van-don/?num=${trackingNumber}`,
+        `/api/ma-van-don?num=${trackingNumber}`,
+        // `${process.env.NEXT_PUBLIC_APP_URL}/api/ma-van-don/?num=${trackingNumber}`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          mode: 'no-cors',
+        },
       );
 
       return res;
