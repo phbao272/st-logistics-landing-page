@@ -10,25 +10,25 @@ const DATA = [
     image:
       'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-2-663601dfc2c45-qnnr8tf825bpv2iky65b12xqa1cgp8a78vyc5rk1fm.webp',
     date: 'May 12, 2021 / News',
-    title: 'Transport of Animal By-Products: Key Aspects and Requirements',
+    title: 'Vận chuyển an tâm, kết nối tương lai: Chúng tôi mang đến sự an tâm, giúp bạn hướng tới tương lai phát triển bền vững',
   },
   {
     image:
       'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-1-663601dfd9805-qnnr8ud28zd06oh7sojxlkp6vf7twxdxl0ltn1in9e.webp',
     date: 'May 12, 2021',
-    title: 'Category 3 Animal By-Products: What You Need to Know',
+    title: 'Giải pháp logistics – Đưa bạn đến đích: Mỗi giải pháp được thiết kế để đảm bảo hàng hóa đến nơi an toàn và đúng hẹn',
   },
   {
     image:
       'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-3-663601e19d508-qnnr8shdvbafjgjy3nqogl69onh3hj6gwrauohlflu.webp',
     date: 'May 12, 2021',
-    title: 'Paradoxes of Animal By-Products Transport',
+    title: 'Chúng tôi biến thách thức thành cơ hội: Mọi thách thức là cơ hội để chúng tôi sáng tạo và đồng hành cùng bạn',
   },
   {
     image:
       'https://yourbestpartner.eu/wp-content/uploads/elementor/thumbs/img-55-1-663601dfd9805-qnnr8ud28zd06oh7sojxlkp6vf7twxdxl0ltn1in9e.webp',
     date: 'May 12, 2021',
-    title: 'Category 3 Animal By-Products: What You Need to Know',
+    title: 'Hợp tác bền vững, thành công vững chắc: Mối quan hệ hợp tác bền vững là nền tảng cho thành công lâu dài',
   },
 ];
 

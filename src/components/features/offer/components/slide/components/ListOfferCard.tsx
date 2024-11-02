@@ -7,6 +7,18 @@ import FoodSvg from '@assets/svgs/offer/food.svg';
 import styles from '../styles.module.css';
 import { twMerge } from 'tailwind-merge';
 
+export const scrollToElement = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    const yOffset = -100;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth',
+    });
+  }
+};
+
 interface CardProps {
   icon: string;
   title: string;
@@ -15,26 +27,32 @@ interface CardProps {
 const CARDS: CardProps[] = [
   {
     icon: PetSvg.src,
-    title: 'Transport of petfood',
+    title: 'Thương mại điện tử',
   },
   {
     icon: FoodSvg.src,
-    title: 'Food transport',
+    title: 'Chính ngạch',
   },
   {
     icon: PinSvg.src,
-    title: 'Local business',
+    title: 'Tiểu ngạch',
   },
 ];
 
 const Card = ({ icon, title }: CardProps) => {
   return (
-    <div className="transition-background flex w-full flex-col gap-5 rounded-[30px] bg-[#fff] p-[30px_20px] text-center shadow-[0px_0px_52.2px_-17px_rgba(0,0,0,0.5)] duration-300">
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        scrollToElement('tmdt');
+      }}
+      className="transition-background flex w-full flex-col items-center justify-center gap-5 rounded-[30px] bg-[#fff] p-[30px_20px] text-center shadow-[0px_0px_52.2px_-17px_rgba(0,0,0,0.5)] duration-300"
+    >
       <div className="flex h-[96px] w-[96px] items-center justify-center self-center rounded-[50%] bg-primary">
         <Image src={icon} alt={title} width={48} height={48} priority />
       </div>
       <div className={`mb-[27px] text-xl font-semibold text-primary`}>{title}</div>
-    </div>
+    </button>
   );
 };
 

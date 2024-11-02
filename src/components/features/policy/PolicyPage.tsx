@@ -1,14 +1,16 @@
 import React from 'react';
-import { Introduction, ServicePrice } from './components';
+import { Introduction, ListServices } from './components';
 import { ContactUs } from '../home/components';
 
 export const PolicyPage = () => {
   return (
     <div className="flex flex-col gap-5 bg-white">
       <Introduction />
+      <ListServices />
+
       {/* <Problem />
-      <ListServices /> */}
-      <ServicePrice />
+      
+      <ServicePrice /> */}
       <ContactUs />
     </div>
   );

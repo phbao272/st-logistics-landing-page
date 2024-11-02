@@ -1,20 +1,18 @@
-import { ButtonCustom } from '@/components/shared/buttons';
-import { IconArrowUpRight } from '@tabler/icons-react';
 import React from 'react';
 import { NumberCountUp } from './NumberCountUp';
 
 const DATA = [
   {
-    number: 10,
-    text: 'YEARS OF EXPERIENCE',
+    number: 8,
+    text: 'NĂM KINH NGHIỆM',
   },
   {
-    number: 10000,
-    text: 'ORGANIZED TRANSPORTATION',
+    number: 22042,
+    text: 'GÓI HÀNG MỖI NGÀY',
   },
   {
-    number: 600000,
-    text: 'TONS OF PRODUCTS DELIVERED',
+    number: 5072709,
+    text: 'CÂN NẶNG MỖI THÁNG',
   },
 ];
 
@@ -24,11 +22,11 @@ export const BackgroundIntro = () => {
       <div className="absolute inset-0 bg-primary opacity-30" />
       <div className="max-w-[clamp(62.5rem, 41.7423rem + 32.4022vw, 80.625rem)] z-10 flex h-full min-h-[50rem] flex-col items-center justify-center px-4 py-8 text-[#F5F5F5] lg:min-h-[46.188rem]">
         <h1 className="z-10 mb-4 text-4xl font-bold md:text-6xl">
-          Here&apos;s why it&apos;s worth choosing us
+          Đây là lý do tại sao bạn nên chọn chúng tôi
         </h1>
         <p className="z-10 mb-8 text-lg md:text-xl">
-          If you are looking for a trusted partner in logistics, you are in the right place.
-          Let&apos;s get to know each other better.
+          Nếu bạn đang tìm kiếm một đối tác đáng tin cậy trong lĩnh vực vận chuyển hàng TQ-VN, bạn
+          đã đến đúng nơi rồi
         </p>
         <div className="z-10 flex w-full max-w-6xl flex-col justify-around gap-10 lg:flex-row">
           {DATA.map((item, index) => (
@@ -39,7 +37,7 @@ export const BackgroundIntro = () => {
             </div>
           ))}
         </div>
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <ButtonCustom
             variant="transparent"
             className="w-fit"
@@ -48,7 +46,7 @@ export const BackgroundIntro = () => {
           >
             CONTACT US
           </ButtonCustom>
-        </div>
+        </div> */}
       </div>
     </div>
   );

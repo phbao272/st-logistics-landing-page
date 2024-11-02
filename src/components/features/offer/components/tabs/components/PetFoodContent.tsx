@@ -1,20 +1,26 @@
 'use client';
 
-import { Image } from '@mantine/core';
+import { TableCustom, TableCustomProps } from '@/components/shared/tables';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { twMerge } from 'tailwind-merge';
 
-interface Props {
+interface Props<T extends Record<string, any>> {
   rtl?: boolean;
   subtitle: string;
   title: string;
   description: string;
-  image: string;
+  tableProps: TableCustomProps<T>;
 }
 
-export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Props) => {
+export const PetFoodContent = <T extends Record<string, any>>({
+  rtl,
+  description,
+  subtitle,
+  title,
+  tableProps,
+}: Props<T>) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -24,8 +30,9 @@ export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Pro
     <div
       ref={ref}
       className={twMerge(
-        'transition-background flex min-h-[41.2rem] flex-col justify-center overflow-hidden rounded-[40px] p-3 shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300 md:p-[30px]',
+        'transition-background flex flex-col justify-center overflow-hidden rounded-[40px] p-3 shadow-[0_0_44px_-25px_rgba(0,0,0,0.5)] duration-300 md:p-[30px]',
         rtl ? 'items-end' : 'items-start',
+        // ' min-h-[41.2rem]'
       )}
     >
       <h2 className="text-[clamp(1rem,0.7137rem+0.4469vw,1.25rem)] font-semibold uppercase tracking-normal text-primary">
@@ -41,13 +48,15 @@ export const PetFoodContent = ({ rtl, description, image, subtitle, title }: Pro
         initial={{ opacity: 0, y: 200 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 200 }}
         transition={{ duration: 1.2, ease: 'easeOut' }}
-        className="mt-10 w-full"
+        className="mt-6 w-full"
       >
-        <Image
+        {/* <Image
           src={image}
           alt={title}
           className="aspect-[16/9] h-auto w-full rounded-[30px] border-none shadow-none"
-        />
+        /> */}
+
+        <TableCustom {...tableProps} />
       </motion.div>
     </div>
   );

@@ -4,35 +4,35 @@ import { LocalBusinessContent } from './components/LocalBusinessContent';
 
 const DATA = [
   {
-    tab: 'TRANSPORT',
-    subtitle: 'Local business',
-    title: 'Full-truck transport',
+    tab: 'Tiếp nhận',
+    subtitle: 'Bước 1',
+    title: 'Nhận hàng, phân loại',
     description:
-      'We offer a comprehensive delivery service for goods of various sizes and weights. We price each transport individually, look for the optimal solution and select the appropriate means of transport. Everything is based on transparent and partnership principles. We deliver the goods in the shortest possible time, directly to you, from every corner of Poland and Europe. We take care of your goods because we know how important they are for your business. We select appropriate routes, check the location regularly, and additionally provide insurance.',
+      'Trong bước đầu tiên, hàng hóa được nhận tại kho và kiểm tra số lượng cũng như tình trạng để đảm bảo chính xác. Nhân viên sẽ phân loại hàng theo loại sản phẩm, kích thước,... nhằm tối ưu hóa không gian lưu trữ. Đồng thời, thông tin chi tiết về từng loại hàng hóa, bao gồm mã hàng và vị trí lưu trữ, sẽ được ghi chép lại để dễ dàng theo dõi. Quy trình này giúp giảm thiểu rủi ro mất mát và hư hỏng, nâng cao hiệu quả logistics.',
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/15-66468d4a152fa.webp',
   },
   {
-    tab: 'Supply chain design',
-    subtitle: 'Local business',
-    title: 'Full-truck transport',
+    tab: 'Vận chuyển',
+    subtitle: 'Bước 2',
+    title: 'Khai báo, vận chuyển',
     description:
-      'We offer a comprehensive delivery service for goods of various sizes and weights. We price each transport individually, look for the optimal solution and select the appropriate means of transport. Everything is based on transparent and partnership principles. We deliver the goods in the shortest possible time, directly to you, from every corner of Poland and Europe. We take care of your goods because we know how important they are for your business. We select appropriate routes, check the location regularly, and additionally provide insurance.',
+      'Tiếp nhận thông tin chi tiết về lô hàng và chuẩn bị đầy đủ các hồ sơ khai báo hải quan, bao gồm hóa đơn, hợp đồng và chứng từ liên quan. Sau khi nộp hồ sơ và hoàn tất thủ tục kiểm tra, chúng tôi sắp xếp phương tiện vận chuyển phù hợp và theo dõi hành trình để cập nhật tình trạng hàng hóa cho khách hàng.',
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/15-66468d4a152fa.webp',
   },
   {
-    tab: 'Tenders',
-    subtitle: 'Local business',
-    title: 'Transport',
+    tab: 'Hạ kiểm',
+    subtitle: 'Bước 3',
+    title: 'Hạ hàng, kiểm đếm',
     description:
-      'We offer transport of semi-finished products, CAT 3 animal by-products, their remaining ingredients, as well as final products from manufacturers of animal food, dry and wet food and chews. We transport loose, fresh, frozen and liquid materials. We select the type of transport and vehicle fleet according to the client’s specific order. All transports have the necessary certificates and veterinary permits. Additionally, we help our clients transport other products, including neutral materials, to provide them with the greatest possible support in terms of transport and logistics.',
+      'Quy trình hạ container hàng và kiểm đếm bắt đầu khi container được đưa đến bãi hạ. Tại đây, container sẽ được đặt xuống khu vực quy định và niêm phong được kiểm tra để đảm bảo tính nguyên vẹn của hàng hóa. Sau khi niêm phong được xác nhận, nhân viên tiến hành mở container và thực hiện kiểm đếm hàng hóa, so sánh với các giấy tờ để đảm bảo khớp đúng về số lượng và tình trạng hàng. Mọi sai lệch sẽ được ghi nhận và báo cáo ngay lập tức',
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/15-66468d4a152fa.webp',
   },
   {
-    tab: 'Tailor-made solutions',
-    subtitle: 'Local business',
-    title: 'Transport',
+    tab: 'Giao nhận',
+    subtitle: 'Bước cuối',
+    title: 'Giao hàng, ký nhận',
     description:
-      'We offer comprehensive creation of supply chains, designed to meet the requirements of specific customers. We select optimal forms of transport, carriers and subcontractors. We set pickup and delivery times. We deal with documentation issues. We create procedures and take care of the turnover and management of containers and pallets. We create settlement methods with carriers, subcontractors, algorithms and methods for adjusting transport rates. We analyze all receipts, creating periodic reports and summaries for our clients. We monitor processes and propose changes so that the created supply chain can be constantly improved.',
+      'Nhân viên giao hàng sẽ liên hệ khách hàng để xác nhận thời gian và địa điểm giao nhận. Tại điểm giao, hàng hóa được kiểm tra tình trạng, số lượng, và ký xác nhận từ khách hàng để đảm bảo tính chính xác và an toàn. Sau khi hoàn tất việc giao hàng, chúng tôi cập nhật trạng thái và lưu trữ thông tin để hỗ trợ khách hàng theo dõi và phản hồi khi cần thiết, đảm bảo sự hài lòng và tin tưởng cho mỗi lần giao nhận.',
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/15-66468d4a152fa.webp',
   },
 ];

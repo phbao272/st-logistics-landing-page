@@ -12,19 +12,18 @@ import { ListOfferCard } from './components/ListOfferCard';
 const DATA = [
   {
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-66698-66462d09b8d4b.webp',
-    title: 'Food transport',
-    subtitle: 'Work with experts to enjoy great results.',
+    title: 'An tâm vận chuyển',
+    subtitle: 'Chúng tôi mang đến sự an tâm, giúp bạn hướng tới tương lai phát triển bền vững.',
   },
   {
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-022-6645f1e5d22f5.webp',
-    title: 'Transport of animal food',
-    subtitle:
-      'Take the first step towards efficient, safe and well-thought-out logistics in your business.',
+    title: 'Thách thức, cơ hội',
+    subtitle: 'Mọi thách thức là cơ hội để chúng tôi sáng tạo và đồng hành cùng bạn.',
   },
   {
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-9-66437d05d04c5.webp',
-    title: 'Local business',
-    subtitle: 'Work with experts to enjoy great results.',
+    title: 'Hợp tác bền vững',
+    subtitle: 'Mối quan hệ hợp tác bền vững là nền tảng cho thành công lâu dài.',
   },
 ];
 
@@ -94,7 +93,7 @@ export const Slide = () => {
 
         <ListOfferCard />
       </div>
-      <div className="h-[500px] md:h-0" />
+      <div className="h-[600px] md:h-0" />
     </>
   );
 };
