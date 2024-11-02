@@ -18,8 +18,7 @@ const DATA = [
   {
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-022-6645f1e5d22f5.webp',
     title: 'Thách thức, cơ hội',
-    subtitle:
-      'Mọi thách thức là cơ hội để chúng tôi sáng tạo và đồng hành cùng bạn.',
+    subtitle: 'Mọi thách thức là cơ hội để chúng tôi sáng tạo và đồng hành cùng bạn.',
   },
   {
     image: 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-9-66437d05d04c5.webp',
@@ -94,7 +93,7 @@ export const Slide = () => {
 
         <ListOfferCard />
       </div>
-      <div className="h-[500px] md:h-0" />
+      <div className="h-[600px] md:h-0" />
     </>
   );
 };
