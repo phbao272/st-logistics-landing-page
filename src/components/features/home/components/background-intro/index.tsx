@@ -1,5 +1,3 @@
-import { ButtonCustom } from '@/components/shared/buttons';
-import { IconArrowUpRight } from '@tabler/icons-react';
 import React from 'react';
 import { NumberCountUp } from './NumberCountUp';
 
@@ -27,7 +25,8 @@ export const BackgroundIntro = () => {
           Đây là lý do tại sao bạn nên chọn chúng tôi
         </h1>
         <p className="z-10 mb-8 text-lg md:text-xl">
-        Nếu bạn đang tìm kiếm một đối tác đáng tin cậy trong lĩnh vực vận chuyển hàng TQ-VN, bạn đã đến đúng nơi rồi
+          Nếu bạn đang tìm kiếm một đối tác đáng tin cậy trong lĩnh vực vận chuyển hàng TQ-VN, bạn
+          đã đến đúng nơi rồi
         </p>
         <div className="z-10 flex w-full max-w-6xl flex-col justify-around gap-10 lg:flex-row">
           {DATA.map((item, index) => (

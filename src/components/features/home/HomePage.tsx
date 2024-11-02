@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  AboutUs,
-  BackgroundIntro,
-  ContactUs,
-  Introduction,
-  LatestNews,
-  Offer,
-  Slide,
-  WhyUs,
-} from './components';
+import { AboutUs, BackgroundIntro, ContactUs, Introduction, Slide, WhyUs } from './components';
 
 export const HomePage = () => {
   return (

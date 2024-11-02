@@ -1,15 +1,7 @@
 import React from 'react';
-import {
-  Slide,
-  PetFood,
-  SectionOffer,
-  Cooperation,
-  ContactUsOffer,
-  Food,
-  LocalBusiness,
-} from './components';
+import { Slide, SectionOffer, Cooperation, ContactUsOffer, LocalBusiness } from './components';
 import { ContactUs } from '../home/components';
-import { FoodTabs, LocalBusinessTabs, PetFoodTabs } from './components/tabs';
+import { LocalBusinessTabs, PetFoodTabs } from './components/tabs';
 
 export const OfferPage = () => {
   return (
