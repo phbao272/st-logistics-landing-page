@@ -50,7 +50,7 @@ export const ListServiceCard = () => {
   return (
     <Container
       size={'xl'}
-      className="absolute bottom-[-55%] left-0 right-0 flex flex-col justify-center px-5 shadow-sm md:bottom-0 md:translate-y-1/2 md:flex-row"
+      className="absolute bottom-[-55%] left-0 right-0 z-10 flex flex-col justify-center px-5 shadow-sm md:bottom-0 md:translate-y-1/2 md:flex-row"
     >
       {CARDS.map((service) => (
         <IntroCard key={service.title} {...service} />
