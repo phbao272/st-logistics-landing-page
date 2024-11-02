@@ -16,21 +16,21 @@ interface Props {
 const CARDS = [
   {
     icon: TransportSvg,
-    title: 'WE TRANSPORT',
+    title: 'CHÚNG TÔI VẬN CHUYỂN',
     description:
-      'We provide comprehensive transport solutions, ensuring efficient and safe delivery of your products.',
+      'Chúng tôi cung cấp các giải pháp vận chuyển toàn diện, đảm bảo giao hàng hiệu quả và an toàn cho sản phẩm của bạn.',
   },
   {
     icon: AdviceSvg,
-    title: 'WE ADVICE',
+    title: 'CHÚNG TÔI TƯ VẤN',
     description:
-      'For over 10 years, we have been gaining knowledge and solving the biggest logistics problems so that we can now support you.',
+      'Trong hơn 5 năm qua, chúng tôi đã tích lũy kiến ​​thức và giải quyết những vấn đề hậu cần lớn nhất để có thể hỗ trợ bạn.',
   },
   {
     icon: SettlingSvg,
-    title: 'WE SETTLING',
+    title: 'CHÚNG TÔI XỬ LÝ',
     description:
-      'We know how important packaging management is. We deal with the turnover and settlement of packaging and pallets.',
+      'Hiểu rõ tầm quan trọng của việc quản lý bao bì, chúng tôi đảm nhiệm toàn bộ quy trình luân chuyển và kiểm kê bao bì, pallet.',
   },
 ];
 

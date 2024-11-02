@@ -71,7 +71,7 @@ export const Left = () => {
             <CountUpExperience />
             <span>+</span>
           </div>
-          <p className="text-nowrap text-[18px]">Years experience</p>
+          <p className="text-nowrap text-[18px]">Năm kinh nghiệm</p>
         </div>
       </div>
     </div>

@@ -18,21 +18,21 @@ export const SectionOffer = ({ rtl }: Props) => {
           rtl ? 'items-end lg:flex-row-reverse' : 'items-start lg:flex-row',
         )}
       >
-        <div className={twMerge('flex flex-col text-white', rtl ? 'items-end' : 'items-start')}>
-          <h2 className="text-base font-semibold">OFFER</h2>
-          <h1
-            className={twMerge(
-              'mt-2 text-[40px] font-bold leading-none md:text-6xl',
-              rtl ? 'text-right' : 'text-left',
-            )}
-          >
-            Get to know our offer
-          </h1>
-          <p className={twMerge('mt-4 font-rubik text-base', rtl ? 'text-right' : 'text-left')}>
-            Let us be your strategic partner in providing efficient logistics tailored to your
-            needs.
-          </p>
-        </div>
+      <div className={twMerge('flex flex-col text-white', rtl ? 'items-end' : 'items-start')}>
+  <h2 className="text-base font-semibold">BẢNG GIÁ</h2>
+  <h1
+    className={twMerge(
+      'mt-2 text-[40px] font-bold leading-none md:text-6xl',
+      rtl ? 'text-right' : 'text-left',
+    )}
+  >
+    Ưu đãi vận chuyển
+  </h1>
+  <p className={twMerge('mt-4 font-rubik text-base leading-relaxed text-justify', rtl ? 'text-right' : 'text-left')}>
+    Hãy để chúng tôi trở thành đối tác của bạn trong việc cung cấp dịch vụ vận chuyển hiệu quả phù hợp với nhu cầu của bạn. Bao gồm cả việc cung cấp nguồn tệ sạch và thanh toán hộ cho các shop, xưởng Trung Quốc.
+  </p>
+</div>
+
 
         <ButtonCustom
           variant="transparent"
@@ -40,7 +40,7 @@ export const SectionOffer = ({ rtl }: Props) => {
           size="xl"
           rightSection={<IconArrowUpRight size={20} />}
         >
-          CONTACT US
+          XEM NGAY
         </ButtonCustom>
       </Container>
     </div>

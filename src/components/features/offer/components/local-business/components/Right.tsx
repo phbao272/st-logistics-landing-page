@@ -13,16 +13,16 @@ const rubik = Rubik({
 export const Right = () => {
   return (
     <div className="relative flex flex-col gap-5 px-3 pt-4">
-      <p className="text-[18px] font-semibold uppercase text-primary">Local business</p>
+      <p className="text-[18px] font-semibold uppercase text-primary">Hợp tác doanh nghiệp trong nước</p>
       <div className="flex flex-col gap-0">
         <h2 className="text-[40px] leading-none text-primary md:text-[4rem] lg:text-7xl">
-          <b>We believe in close</b> local cooperation.
+          <b>Chúng tôi</b> là đối tác tin cậy.
         </h2>
       </div>
       <p className={twMerge('mb-4 text-justify font-rubik', rubik.className)}>
-        We are perfectly aware of the effort you have to devote every day to develop your
-        businesses. We want to help with this, transport products for you on fair terms, learn with
-        you, be with you, develop our local business with you.
+      Chúng tôi cung cấp dịch vụ vận chuyển uy tín, an toàn và nhanh chóng nhất. Với sự tận tâm và am hiểu thị trường, 
+      chúng tôi đồng hành cùng bạn, đưa hàng hóa đến tay bạn một cách hiệu quả với chi phí tối ưu nhất, góp phần vào sự phát 
+      triển bền vững của cả hai bên.
       </p>
 
       <Image

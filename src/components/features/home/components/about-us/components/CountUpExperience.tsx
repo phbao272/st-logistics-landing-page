@@ -13,9 +13,9 @@ export const CountUpExperience = () => {
   const { pauseResume } = useCountUp({
     ref: countUpRef,
     start: 0,
-    end: 10,
+    end: 8,
     delay: 1000,
-    duration: 5,
+    duration: 6,
     smartEasingAmount: 0.5,
   });
 

@@ -5,7 +5,7 @@ import { PetFoodContent } from './components/PetFoodContent';
 const DATA = [
   {
     tab: 'TRANSPORT',
-    subtitle: 'Transport of PETFOOD',
+    subtitle: 'Transport of PETFOODD',
     title: 'Transport',
     description:
       'We offer transport of semi-finished products, CAT 3 animal by-products, their remaining ingredients, as well as final products from manufacturers of animal food, dry and wet food and chews. We transport loose, fresh, frozen and liquid materials. We select the type of transport and vehicle fleet according to the client’s specific order. All transports have the necessary certificates and veterinary permits. Additionally, we help our clients transport other products, including neutral materials, to provide them with the greatest possible support in terms of transport and logistics.',

@@ -11,16 +11,16 @@ export const Introduction = () => {
       <main className="flex flex-col items-center gap-5 p-4 text-center text-white sm:p-8">
         <AnimatedText
           className="w-[80%] flex-wrap text-center text-[15px] sm:text-xl md:w-full md:text-2xl"
-          text="WE DON'T WANT TO BE ANOTHER LOGISTICS COMPANY."
+          text="HƠN CẢ LOGISTICS, SỨ MỆNH CỦA CHÚNG TÔI LÀ"
         />
         <h1 className="text-4xl font-extrabold capitalize leading-none text-white md:text-[clamp(4.75rem,3.3184rem+2.2346vw,6rem)]">
-          We Want To Be
+        Không chỉ giao hàng
           <br />
-          Your Best Partner.
+          chúng tôi giao cả niềm tin
         </h1>
 
         <ButtonCustom className="w-fit" size="xl" rightSection={<IconArrowRight size={20} />}>
-          CHECK OFFER
+          GIỚI THIỆU DỊCH VỤ
         </ButtonCustom>
       </main>
       <ListServiceCard />

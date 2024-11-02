@@ -3,7 +3,7 @@
 import React from 'react';
 import { tss } from '@/libs/utils/tss-style';
 import { Container, Image } from '@mantine/core';
-import { IconMail, IconPhone } from '@tabler/icons-react';
+import { IconMail, IconPhone, IconBrandFacebook } from '@tabler/icons-react';
 import Link from 'next/link';
 
 interface IItem {
@@ -24,8 +24,8 @@ const OTHER_ITEMS = [
 ];
 
 const CONTACT_INFO = [
-  { icon: IconPhone, title: 'Call us', content: '+48 660-177-549' },
-  { icon: IconMail, title: 'Send email', content: 'office@sota.com' },
+  { icon: IconPhone, title: 'Gọi cho chúng tôi', content: '0989.559.828' },
+  { icon: IconBrandFacebook, title: 'Facebook', content: 'https://www.facebook.com/sotalogistics' },
 ];
 
 const Footer = () => {
@@ -36,8 +36,8 @@ const Footer = () => {
           <div className="flex-responsive gap-8 md:gap-12">
             <CompanyInfo />
             <div className="grid grid-cols-1 gap-8 text-white sm:grid-cols-2 lg:flex-1 lg:grid-cols-3">
-              <MenuSection title="Menu" items={MENU_ITEMS} />
-              <MenuSection title="Other" items={OTHER_ITEMS} />
+              {/* <MenuSection title="Menu" items={MENU_ITEMS} /> */}
+              {/* <MenuSection title="Other" items={OTHER_ITEMS} /> */}
               <FastContact />
             </div>
           </div>
@@ -57,13 +57,12 @@ const CompanyInfo = () => (
         className="h-full md:h-[50px]"
       />
     </Link>
-    <p className="mt-4 text-base font-bold sm:text-lg">YOUR PROVEN PARTNER IN LOGISTICS</p>
+    <p className="mt-4 text-base font-bold sm:text-lg">ĐƠN VỊ LOGISTICS ĐÃ ĐƯỢC KIỂM CHỨNG</p>
     <hr className="my-4 border-gray-500" />
-    <p className="text-sm sm:text-base">Your Best Partner Sp. z o.o.</p>
-    <p className="text-sm sm:text-base">NIP: 5588774411 KRS: 4444555222</p>
+    <p className="text-sm sm:text-base">CEO: Hoàng Sơn</p>
+    <p className="text-sm sm:text-base">Hotline: 0989.559.828</p>
     <div className="mt-4 flex items-center">
-      <i className="fas fa-map-marker-alt mr-2"></i>
-      <p className="text-sm sm:text-base">Poland — Ul. Osiedlowa 1/6, 64-316 Kuślin</p>
+    <p className="text-sm sm:text-base">Address: LK 27-28 khu đất dịch vụ Dương Nội, Hà Đông, Hà Nội</p>
     </div>
   </div>
 );
@@ -89,12 +88,12 @@ const MenuSection = ({ title, items }: { title: string; items: IItem[] }) => {
 
 const FastContact = () => (
   <div>
-    <p className="mb-4 text-base font-bold sm:text-lg">Fast contact</p>
+    <p className="mb-4 text-base font-bold sm:text-lg">Liên hệ nhanh</p>
     <hr className="my-4 w-[4rem] border-gray-500" />
     {CONTACT_INFO.map((info, index) => (
       <div key={index} className="mb-4 flex items-center justify-start gap-2">
         <info.icon size={30} className="sm:size-[35px] md:size-[40px]" />
-        <div className="flex flex-col">
+        <div className="flex flex-col max-w-[calc(100%-40px)]">
           <p className="text-sm sm:text-base">{info.title}</p>
           <p className="text-sm sm:text-base">{info.content}</p>
         </div>
@@ -107,7 +106,7 @@ const Copyright = () => (
   <div className="bg-white">
     <Container size="lg" className="flex flex-col justify-between py-4 text-primary sm:flex-row">
       <p className="text-center text-xs sm:text-left">
-        © 2021 Your Best Partner Sp. z o.o. All rights reserved.
+        © 2024 SoTa Logistics All rights reserved.
       </p>
       <p className="mt-2 text-center text-xs sm:mt-0 sm:text-right">
         Made by{' '}

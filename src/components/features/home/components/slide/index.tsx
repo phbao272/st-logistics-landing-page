@@ -7,7 +7,7 @@ import { Image } from '@mantine/core';
 const DATA = [
   'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-10-66446120e979f.webp',
   'https://yourbestpartner.eu/wp-content/uploads/2024/05/2635-6634c84550363.webp',
-  'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-022-6645f1e5d22f5.webp',
+  // 'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-022-6645f1e5d22f5.webp',
   'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-68-6634c847e2f3d.webp',
   'https://yourbestpartner.eu/wp-content/uploads/2024/05/img-3-6634c8454a9e7.webp',
 ];

@@ -15,15 +15,15 @@ interface CardProps {
 const CARDS: CardProps[] = [
   {
     icon: PetSvg.src,
-    title: 'Transport of petfood',
+    title: 'Thương mại điện tử',
   },
   {
     icon: FoodSvg.src,
-    title: 'Food transport',
+    title: 'Chính ngạch',
   },
   {
     icon: PinSvg.src,
-    title: 'Local business',
+    title: 'Tiểu ngạch',
   },
 ];
 

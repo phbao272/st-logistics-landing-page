@@ -8,11 +8,10 @@ export const WhyUs = () => {
   return (
     <div className="px-4 pb-16 text-center">
       <h2 className="mb-4 text-4xl font-medium">
-        <b>Why</b> us?
+        <b>Tại sao</b> nên chọn chúng tôi?
       </h2>
       <p className="mb-12 text-lg">
-        Full commitment regardless of the size of the order. This approach allows us to meet the
-        expectations of even the most demanding customers.
+      Cam kết hoàn toàn bất kể quy mô đơn hàng. Cách tiếp cận này cho phép chúng tôi đáp ứng được kỳ vọng của ngay cả những khách hàng khó tính nhất.
       </p>
       <div className="flex-responsive justify-center gap-10 md:gap-8">
         <div className="basis-4/12">
@@ -23,10 +22,9 @@ export const WhyUs = () => {
               className="mx-auto max-h-[100px] max-w-[100px]"
             />
           </div>
-          <h3 className="mb-2 text-[22px] font-bold">EXTENSIVE RESOURCES</h3>
+          <h3 className="mb-2 text-[22px] font-bold">TÀI NGUYÊN RỘNG RÃI</h3>
           <p className="text-justify">
-            Our network of partners extends from transport companies, customs agencies, IT partners,
-            to production plants and storage warehouses.
+          Mạng lưới đối tác của chúng tôi trải dài từ các công ty vận tải, cơ quan hải quan, đối tác CNTT đến các nhà máy sản xuất và kho bãi.
           </p>
         </div>
         <div className="basis-4/12">
@@ -37,10 +35,12 @@ export const WhyUs = () => {
               className="mx-auto max-h-[100px] max-w-[100px]"
             />
           </div>
-          <h3 className="mb-2 text-[22px] font-bold">TAILOR-MADE SOLUTIONS</h3>
+          <h3 className="mb-2 text-[22px] font-bold">GIẢI PHÁP LINH HOẠT</h3>
           <p className="text-justify">
-            We want to follow our clients, not impose common patterns of action on them. We create
-            tailor-made solutions that are best for their business, not our convenience.
+          Chúng tôi luôn đồng hành và linh hoạt theo nhu cầu của khách hàng, 
+          không áp đặt những khuôn mẫu sẵn có. Mỗi giải pháp chúng tôi tạo ra 
+          đều được "may đo" riêng biệt, phù hợp nhất với doanh nghiệp của khách hàng, 
+          chứ không phải vì sự tiện lợi của chúng tôi.
           </p>
         </div>
         <div className="basis-4/12">
@@ -51,10 +51,11 @@ export const WhyUs = () => {
               className="mx-auto max-h-[100px] max-w-[100px]"
             />
           </div>
-          <h3 className="mb-2 text-[22px] font-bold">SUPPLY CHAIN DESIGN</h3>
+          <h3 className="mb-2 text-[22px] font-bold">CHUỖI CUNG ỨNG</h3>
           <p className="text-justify">
-            We offer comprehensive creation of supply chains, designed to meet the requirements of
-            specific customers. We select optimal forms of transport, carriers and subcontractors.
+          Chúng tôi cung cấp giải pháp thiết kế chuỗi cung ứng toàn diện, 
+          tùy chỉnh theo từng nhu cầu của khách hàng. Chúng tôi lựa chọn 
+          phương thức vận chuyển, nhà vận tải tối ưu nhất, đảm bảo hiệu quả và chất lượng.
           </p>
         </div>
       </div>

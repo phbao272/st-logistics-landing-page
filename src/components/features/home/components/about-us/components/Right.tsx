@@ -39,20 +39,20 @@ export const Right = () => {
 
   return (
     <div className="flex flex-col gap-5 px-3 pt-4">
-      <p className="text-base font-semibold uppercase text-primary md:text-[18px]">about us</p>
+      <p className="text-base font-semibold uppercase text-primary md:text-[18px]">về chúng tôi</p>
       <div className="flex flex-col gap-0">
-        <b className="text-4xl text-[#3E3F41]">Logistics with passion,</b>
-        <span className="text-4xl font-medium text-[#3E3F41]">partnership with commitment.</span>
+        <b className="text-4xl text-[#3E3F41]">Logistics bằng cả nhiệt huyết</b>
+        <span className="text-4xl font-medium text-[#3E3F41]">hợp tác và cam kết.</span>
       </div>
       <p className="mb-4 text-justify">
-        Partnership – this is the key word when it comes to our company and everything we do within
-        it. Existing clients have already realized that it is possible to act differently, on
-        transparent and fair principles, while taking care of our contractors. If you are also
-        looking for a trusted partner in logistics, you are in the right place.
+      Hợp tác – chính là giá trị cốt lõi của chúng tôi trong mọi hoạt động. 
+      Khách hàng của chúng tôi đã cảm nhận sự khác biệt khi cùng hợp tác trên 
+      nền tảng minh bạch và công bằng, với sự tận tâm đến từng đối tác. Nếu bạn 
+      đang tìm kiếm một đối tác logistics đáng tin cậy, chúc mừng bạn đã đến đúng nơi.
       </p>
 
       <ButtonCustom className="w-fit" size="xl" rightSection={<IconArrowRight size={20} />}>
-        GET TO KNOW US BETTER
+        TÌM HIỂU THÊM VỀ CHÚNG TÔI
       </ButtonCustom>
 
       <motion.div
@@ -70,12 +70,14 @@ export const Right = () => {
 
             <div className="flex flex-col gap-1">
               <p className="text-xl font-bold uppercase text-[#455589] md:text-2xl">
-                Our philosophy
+              Triết lý của chúng tôi
               </p>
-              <p className="text-justify font-serif">
-                We believe in business with a human face. You can run a business on a partnership
-                basis, taking care of relationships with both clients and employees. We are
-                convinced that together everything is possible.
+              <p className="text-justify: auto">
+              Chúng tôi tin vào kinh doanh gắn kết với giá trị nhân văn. 
+              Một doanh nghiệp bền vững không chỉ dựa trên lợi nhuận mà 
+              còn trên sự hợp tác chân thành, tôn trọng từng mối quan hệ 
+              với khách hàng và nhân viên. Chúng tôi vững tin rằng, khi 
+              cùng nhau đồng hành, không có giới hạn nào là không thể vượt qua.
               </p>
             </div>
           </div>

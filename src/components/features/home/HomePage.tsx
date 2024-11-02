@@ -16,11 +16,11 @@ export const HomePage = () => {
       <Introduction />
       <div className="h-[600px] w-full md:h-[300px] lg:h-[200px]" />
       <AboutUs />
-      <Offer />
+      {/* <Offer /> */}
       <Slide />
       <WhyUs />
       <BackgroundIntro />
-      <LatestNews />
+      {/* <LatestNews /> */}
       <ContactUs />
     </>
   );
