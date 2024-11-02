@@ -64,6 +64,12 @@ export default function RootLayout({
           href="https://yourbestpartner.eu/wp-content/uploads/2024/05/img-9-66437d05d04c5.webp"
         />
         <link rel="preload" as="video" href="/videos/bg-1.mp4" />
+        <link
+          rel="preload"
+          as="document"
+          type="application/pdf"
+          href="https://drive.google.com/file/d/1fBLSzRT6_uUato-W6aBNohmlm2NDuqfy/preview"
+        />
       </head>
       <body className={outfit.className}>
         <WebVitals />
