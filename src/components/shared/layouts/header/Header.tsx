@@ -8,7 +8,7 @@ import { tss } from '@libs/utils/tss-style';
 import { MainContainer } from '@shared/layouts';
 import React from 'react';
 import { ButtonCustom } from '../../buttons';
-import { IconMail, IconPhone } from '@tabler/icons-react';
+import { IconBrandFacebookFilled, IconPhone } from '@tabler/icons-react';
 import { DrawerHeader } from './components';
 import { twMerge } from 'tailwind-merge';
 
@@ -71,8 +71,13 @@ export function Header() {
               <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
                 <IconPhone size={20} />
               </ButtonCustom>
-              <ButtonCustom className="w-fit" size="lg" rightSection={<IconMail size={20} />}>
-                Get a quote
+              <ButtonCustom
+                className="w-fit"
+                size="lg"
+                leftSection={<IconBrandFacebookFilled size={20} />}
+                onClick={() => window.open('https://www.facebook.com/sotalogistics', '_blank')}
+              >
+                Fanpage
               </ButtonCustom>
             </Flex>
 
