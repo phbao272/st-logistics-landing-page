@@ -8,7 +8,7 @@ import { IconSearch } from '@tabler/icons-react';
 import { Loader } from '@mantine/core';
 
 export const TrackingNumber = () => {
-  const [trackingNumber, setTrackingNumber] = useState('773312314469851');
+  const [trackingNumber, setTrackingNumber] = useState('');
   const [result, setResult] = useState('');
 
   const { isPending, mutate } = useMutation({
