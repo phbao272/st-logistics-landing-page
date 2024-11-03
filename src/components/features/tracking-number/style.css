@@ -62,8 +62,8 @@
 .timeline_tracking .event:after {
   position: absolute;
   display: block;
-  left: -32px;
-  top: 6px;
+  left: -31px;
+  top: 0px;
   background: #ddd;
   border-radius: 50%;
   height: 11px;

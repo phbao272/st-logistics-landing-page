@@ -1,8 +1,11 @@
+'use client';
+
 import { ButtonCustom } from '@/components/shared/buttons';
 import { Container } from '@mantine/core';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { scrollToElement } from '../slide/components/ListOfferCard';
 
 interface Props {
   rtl?: boolean;
@@ -45,6 +48,7 @@ export const SectionOffer = ({ rtl }: Props) => {
           className="w-fit"
           size="xl"
           rightSection={<IconArrowUpRight size={20} />}
+          onClick={() => scrollToElement('tmdt')}
         >
           XEM NGAY
         </ButtonCustom>

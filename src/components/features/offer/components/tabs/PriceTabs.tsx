@@ -1,9 +1,8 @@
 'use client';
 
-import { IOptionTab, TabsCustom } from '@/components/shared/tabs';
+import { IOptionTab, TabsCustom, TableCustomProps } from '@/components/shared/tabs';
 import React from 'react';
-import { PetFoodContent } from './components/PetFoodContent';
-import { TableCustomProps } from '@/components/shared/tables';
+import { PriceContent } from './components/PriceContent';
 import { activeTabAtom } from '@/components/shared/tabs/atom/active-tab-atom';
 import { useAtom } from 'jotai';
 
@@ -35,31 +34,31 @@ const DATA: IData[] = [
       ],
       data: [
         {
-          kg: '0',
+          kg: '0-10',
           price: '23.000',
         },
         {
-          kg: '10',
+          kg: '10-20',
           price: '22.000',
         },
         {
-          kg: '20',
+          kg: '20-30',
           price: '21.000',
         },
         {
-          kg: '30',
+          kg: '30-40',
           price: '20.000',
         },
         {
-          kg: '40',
+          kg: '40-50',
           price: '19.000',
         },
         {
-          kg: '50',
+          kg: '50-100',
           price: '18.000',
         },
         {
-          kg: '100',
+          kg: '>100',
           price: '17.000',
         },
       ],
@@ -72,46 +71,10 @@ const DATA: IData[] = [
     description:
       'Hàng hóa vận chuyển qua đường chính ngạch phải tuân thủ các quy định pháp luật, đảm bảo chất lượng và tiêu chuẩn an toàn theo quy định của Việt Nam và quốc tế. Mỗi lô hàng cần có hồ sơ chứng từ đầy đủ, bao gồm hóa đơn, hợp đồng và giấy tờ hải quan để được thông quan. Quy trình này giúp giảm thiểu rủi ro về mất mát và hư hỏng, đồng thời đảm bảo tính minh bạch trong các giao dịch. Hàng hóa cũng phải phù hợp với các điều khoản trong hợp đồng thương mại quốc tế đã ký kết, từ đó tạo ra một chuỗi cung ứng an toàn và hiệu quả.',
     tableProps: {
-      // columns: [
-      //   {
-      //     title: 'Số KG/ngày',
-      //     key: 'kg',
-      //   },
-      //   {
-      //     title: 'Giá',
-      //     key: 'price',
-      //   },
-      // ],
-      // data: [
-      //   {
-      //     kg: '0',
-      //     price: '23.000',
-      //   },
-      //   {
-      //     kg: '10',
-      //     price: '22.000',
-      //   },
-      //   {
-      //     kg: '20',
-      //     price: '21.000',
-      //   },
-      //   {
-      //     kg: '30',
-      //     price: '20.000',
-      //   },
-      //   {
-      //     kg: '40',
-      //     price: '19.000',
-      //   },
-      //   {
-      //     kg: '50',
-      //     price: '18.000',
-      //   },
-      // ],
       columns: [
         {
-          title: 'TIỂU NGẠCH',
-          key: 'tieu_ngach',
+          title: 'CHÍNH NGẠCH (Đã bao gồm full VAT)',
+          key: 'cn',
         },
         {
           title: 'Giá KG',
@@ -124,19 +87,9 @@ const DATA: IData[] = [
       ],
       data: [
         {
-          tieu_ngach: 'Dưới 5m3 hoặc dưới 200kg',
-          price_kg: '12.000 - 18.000',
-          price_m3: '2.000.000 - 2.100.000',
-        },
-        {
-          tieu_ngach: 'Từ 5m3 - 10m3 hoặc trên 200kg',
-          price_kg: '9.000 - 11.000',
-          price_m3: '1.800.000 - 1.900.000',
-        },
-        {
-          tieu_ngach: 'Trên 10m3 hoặc trên 1 tấn',
-          price_kg: '6.000 - 8.000',
-          price_m3: '1.600.000 - 1.700.000',
+          cn: 'Nhận từ 10m3 hoặc từ 1 tấn trở lên',
+          price_kg: '4.500 - 7.000',
+          price_m3: '1.200.000 - 1.600.000',
         },
       ],
       header: 'TÙY THUỘC VÀO TỪNG LOẠI MẶT HÀNG',
@@ -187,12 +140,12 @@ const DATA: IData[] = [
   },
 ];
 
-export const PetFoodTabs = () => {
+export const PriceTabs = () => {
   const [activeTab, setActiveTab] = useAtom(activeTabAtom);
 
   const transformData: IOptionTab[] = DATA.map(({ tab, ...content }) => ({
     title: tab,
-    content: <PetFoodContent {...content} />,
+    content: <PriceContent {...content} />,
   }));
 
   return (

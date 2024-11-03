@@ -7,8 +7,11 @@ import React from 'react';
 import PhilosophySvg from '@/assets/svgs/philosophy.svg';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 export const Right = () => {
+  const router = useRouter();
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -45,13 +48,20 @@ export const Right = () => {
         <span className="text-4xl font-medium text-[#3E3F41]">hợp tác và cam kết.</span>
       </div>
       <p className="mb-4 text-justify">
-      Hợp tác – chính là giá trị cốt lõi của chúng tôi trong mọi hoạt động. 
-      Khách hàng của chúng tôi đã cảm nhận sự khác biệt khi cùng hợp tác trên 
-      nền tảng minh bạch và công bằng, với sự tận tâm đến từng đối tác. Nếu bạn 
-      đang tìm kiếm một đối tác logistics đáng tin cậy, chúc mừng bạn đã đến đúng nơi.
+        Hợp tác – chính là giá trị cốt lõi của chúng tôi trong mọi hoạt động. Khách hàng của chúng
+        tôi đã cảm nhận sự khác biệt khi cùng hợp tác trên nền tảng minh bạch và công bằng, với sự
+        tận tâm đến từng đối tác. Nếu bạn đang tìm kiếm một đối tác logistics đáng tin cậy, chúc
+        mừng bạn đã đến đúng nơi.
       </p>
 
-      <ButtonCustom className="w-fit" size="xl" rightSection={<IconArrowRight size={20} />}>
+      <ButtonCustom
+        className="w-fit"
+        size="xl"
+        rightSection={<IconArrowRight size={20} />}
+        onClick={() => {
+          router.push('/chinh-sach');
+        }}
+      >
         TÌM HIỂU THÊM VỀ CHÚNG TÔI
       </ButtonCustom>
 
@@ -70,14 +80,13 @@ export const Right = () => {
 
             <div className="flex flex-col gap-1">
               <p className="text-xl font-bold uppercase text-[#455589] md:text-2xl">
-              Triết lý của chúng tôi
+                Triết lý của chúng tôi
               </p>
               <p className="text-justify: auto">
-              Chúng tôi tin vào kinh doanh gắn kết với giá trị nhân văn. 
-              Một doanh nghiệp bền vững không chỉ dựa trên lợi nhuận mà 
-              còn trên sự hợp tác chân thành, tôn trọng từng mối quan hệ 
-              với khách hàng và nhân viên. Chúng tôi vững tin rằng, khi 
-              cùng nhau đồng hành, không có giới hạn nào là không thể vượt qua.
+                Chúng tôi tin vào kinh doanh gắn kết với giá trị nhân văn. Một doanh nghiệp bền vững
+                không chỉ dựa trên lợi nhuận mà còn trên sự hợp tác chân thành, tôn trọng từng mối
+                quan hệ với khách hàng và nhân viên. Chúng tôi vững tin rằng, khi cùng nhau đồng
+                hành, không có giới hạn nào là không thể vượt qua.
               </p>
             </div>
           </div>

@@ -14,7 +14,7 @@ interface Props<T extends Record<string, any>> {
   tableProps: TableCustomProps<T>;
 }
 
-export const PetFoodContent = <T extends Record<string, any>>({
+export const PriceContent = <T extends Record<string, any>>({
   rtl,
   description,
   subtitle,

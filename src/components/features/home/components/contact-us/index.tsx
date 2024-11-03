@@ -1,5 +1,6 @@
 import { ButtonCustom } from '@/components/shared/buttons';
 import { IconArrowUpRight } from '@tabler/icons-react';
+import Link from 'next/link';
 import React from 'react';
 
 export const ContactUs = () => {
@@ -11,7 +12,7 @@ export const ContactUs = () => {
           Nếu bạn cần 1 đối tác vận chuyển đáng tin cậy !
         </h1>
         <p className="z-10 mb-8 text-center text-lg md:text-xl">
-        Đừng ngần ngại liên hệ với chúng tôi, chắc chắn chúng tôi có thể giúp được bạn
+          Đừng ngần ngại liên hệ với chúng tôi, chắc chắn chúng tôi có thể giúp được bạn
         </p>
 
         <ButtonCustom
@@ -20,7 +21,9 @@ export const ContactUs = () => {
           size="xl"
           rightSection={<IconArrowUpRight size={20} />}
         >
-          LIÊN HỆ NGAY
+          <Link href="https://zalo.me/84989559828" target="_blank">
+            LIÊN HỆ NGAY
+          </Link>
         </ButtonCustom>
       </div>
     </div>
