@@ -1,11 +1,15 @@
+'use client';
+
 import React from 'react';
 import styles from './styles.module.css';
 import { ListServiceCard } from './components/IntroCard';
 import { ButtonCustom } from '@/components/shared/buttons';
 import { IconArrowRight } from '@tabler/icons-react';
 import { AnimatedText } from '@/components/shared/animations';
+import { useRouter } from 'next/navigation';
 
 export const Introduction = () => {
+  const router = useRouter();
   return (
     <div className={styles.background}>
       <div className="absolute inset-0 h-full w-full">
@@ -35,7 +39,14 @@ export const Introduction = () => {
           chúng tôi giao cả niềm tin
         </h1>
 
-        <ButtonCustom className="w-fit" size="xl" rightSection={<IconArrowRight size={20} />}>
+        <ButtonCustom
+          className="w-fit"
+          size="xl"
+          rightSection={<IconArrowRight size={20} />}
+          onClick={() => {
+            router.push('/bang-gia');
+          }}
+        >
           GIỚI THIỆU DỊCH VỤ
         </ButtonCustom>
       </main>

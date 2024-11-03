@@ -75,7 +75,9 @@ export const DrawerHeader = ({ drawerOpened, toggleDrawer }: Props) => {
 
         <Flex gap="md" mt="md">
           <ButtonCustom variant="outline" size="lg">
-            <IconPhone size={20} />
+            <Link href="tel:+84989559828" target="_blank">
+              <IconPhone size={20} />
+            </Link>
           </ButtonCustom>
           <ButtonCustom
             variant="outline"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slide, SectionOffer, Cooperation, ContactUsOffer, LocalBusiness } from './components';
 import { ContactUs } from '../home/components';
-import { LocalBusinessTabs, PetFoodTabs } from './components/tabs';
+import { LocalBusinessTabs, PriceTabs } from './components/tabs';
 
 export const OfferPage = () => {
   return (
@@ -10,7 +10,7 @@ export const OfferPage = () => {
 
       {/* <PetFood /> */}
       <SectionOffer rtl />
-      <PetFoodTabs />
+      <PriceTabs />
       <ContactUsOffer bgUrl="https://yourbestpartner.eu/wp-content/uploads/2024/05/img-6-6635e9409b19a.webp" />
 
       {/* <Food />

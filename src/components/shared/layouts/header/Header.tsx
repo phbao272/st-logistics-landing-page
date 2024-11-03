@@ -67,16 +67,19 @@ export function Header() {
                 </Link>
               ))}
               <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
-                <IconPhone size={20} />
+                <Link href="tel:+84989559828" target="_blank">
+                  <IconPhone size={20} />
+                </Link>
               </ButtonCustom>
-              <ButtonCustom
-                className="w-fit"
-                size="lg"
-                leftSection={<IconBrandFacebookFilled size={20} />}
-                onClick={() => window.open('https://www.facebook.com/sotalogistics', '_blank')}
-              >
-                Fanpage
-              </ButtonCustom>
+              <Link href="https://www.facebook.com/sotalogistics" target="_blank">
+                <ButtonCustom
+                  className="w-fit"
+                  size="lg"
+                  leftSection={<IconBrandFacebookFilled size={20} />}
+                >
+                  Fanpage
+                </ButtonCustom>
+              </Link>
             </Flex>
 
             <Burger

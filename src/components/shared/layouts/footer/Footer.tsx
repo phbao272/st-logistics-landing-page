@@ -55,7 +55,11 @@ const CompanyInfo = () => (
     <p className="mt-4 text-base font-bold sm:text-lg">ĐƠN VỊ LOGISTICS ĐÃ ĐƯỢC KIỂM CHỨNG</p>
     <hr className="my-4 border-gray-500" />
     <p className="text-sm sm:text-base">CEO: Hoàng Sơn</p>
-    <p className="text-sm sm:text-base">Hotline: 0989.559.828</p>
+    <p className="text-sm sm:text-base">
+      <Link href="tel:+84989559828" target="_blank" rel="noopener noreferrer">
+        Hotline: 0989.559.828
+      </Link>
+    </p>
     <div className="mt-4 flex items-center">
       <p className="text-sm sm:text-base">
         Address: LK 27-28 khu đất dịch vụ Dương Nội, Hà Đông, Hà Nội
@@ -102,7 +106,14 @@ const FastContact = () => (
               {info.content}
             </a>
           ) : (
-            <p className="text-sm sm:text-base">{info.content}</p>
+            <a
+              href={`tel:${info.content}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white hover:text-gray-300 sm:text-base"
+            >
+              {info.content}
+            </a>
           )}
         </div>
       </div>

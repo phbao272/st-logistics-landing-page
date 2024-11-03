@@ -1,6 +1,9 @@
+'use client';
+
 import { ButtonCustom } from '@/components/shared/buttons';
 import { IconArrowUpRight } from '@tabler/icons-react';
 import React from 'react';
+import { scrollToElement } from '../slide/components/ListOfferCard';
 
 interface Props {
   bgUrl: string;
@@ -29,6 +32,9 @@ export const ContactUsOffer = ({ bgUrl }: Props) => {
             className="w-fit"
             size="xl"
             rightSection={<IconArrowUpRight size={20} />}
+            onClick={() => {
+              scrollToElement('tmdt');
+            }}
           >
             TÔI MUỐN BIẾT THÊM
           </ButtonCustom>

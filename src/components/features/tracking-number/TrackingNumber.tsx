@@ -48,7 +48,7 @@ export const TrackingNumber = () => {
   return (
     <div className="container mb-[60px] flex flex-col gap-5">
       <div className="rounded-xl pt-5 md:max-w-6xl md:p-6">
-        <h1 className="mb-6 text-2xl font-bold text-gray-800">Tra cứu vận đơn</h1>
+        <h1 className="mb-6 text-2xl font-bold text-gray-800">Tra cứu hành trình Trung Quốc</h1>
         <form onSubmit={handleSubmit} className="md:mb-6">
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <input
