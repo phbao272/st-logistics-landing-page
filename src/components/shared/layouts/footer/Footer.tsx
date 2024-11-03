@@ -50,11 +50,7 @@ const Footer = () => {
 const CompanyInfo = () => (
   <div className="text-white">
     <Link href="/">
-      <Image
-        src="https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png"
-        alt="logo"
-        className="h-full md:h-[50px]"
-      />
+      <Image src="/images/logo-white-remove-bg.png" alt="logo" className="h-[100px] w-auto" />
     </Link>
     <p className="mt-4 text-base font-bold sm:text-lg">ĐƠN VỊ LOGISTICS ĐÃ ĐƯỢC KIỂM CHỨNG</p>
     <hr className="my-4 border-gray-500" />
@@ -96,7 +92,18 @@ const FastContact = () => (
         <info.icon size={30} className="sm:size-[35px] md:size-[40px]" />
         <div className="flex max-w-[calc(100%-40px)] flex-col">
           <p className="text-sm sm:text-base">{info.title}</p>
-          <p className="text-sm sm:text-base">{info.content}</p>
+          {info.title === 'Facebook' ? (
+            <a
+              href={info.content}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white hover:text-gray-300 sm:text-base"
+            >
+              {info.content}
+            </a>
+          ) : (
+            <p className="text-sm sm:text-base">{info.content}</p>
+          )}
         </div>
       </div>
     ))}

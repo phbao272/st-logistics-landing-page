@@ -49,9 +49,7 @@ export function Header() {
           <Group h="100%" px="md" className={classes.headerContent}>
             <Link href={'/'}>
               <Image
-                src={
-                  'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
-                }
+                src={'/images/logo-white-remove-bg.png'}
                 alt="logo"
                 className={twMerge(classes.logo)}
               />
@@ -163,7 +161,7 @@ const useStyles = tss
     },
 
     logo: {
-      height: headerScrolled ? 25 : 30,
+      height: headerScrolled ? 55 : 70,
       transition: 'height 0.3s ease',
       objectFit: 'contain',
       width: 'auto',

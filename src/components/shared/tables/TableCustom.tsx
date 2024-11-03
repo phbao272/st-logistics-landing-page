@@ -32,7 +32,11 @@ export const TableCustom = <T extends Record<string, any>>({
         {columns.map((column, colIndex) => {
           const cellValue = item[column.key];
           const renderedValue = column.render ? column.render(cellValue) : cellValue;
-          return <Table.Td key={colIndex}>{renderedValue}</Table.Td>;
+          return (
+            <Table.Td key={colIndex} className="text-base">
+              {renderedValue}
+            </Table.Td>
+          );
         })}
       </Table.Tr>
     );
@@ -41,7 +45,7 @@ export const TableCustom = <T extends Record<string, any>>({
   return (
     <>
       {header && (
-        <div className="border-primary border-l border-r border-t p-3 text-center text-sm">
+        <div className="border-primary border-l border-r border-t p-3 text-center text-lg">
           {header}
         </div>
       )}
@@ -56,7 +60,9 @@ export const TableCustom = <T extends Record<string, any>>({
         <Table.Thead>
           <Table.Tr>
             {columns.map((column, index) => (
-              <Table.Th key={index}>{column.title}</Table.Th>
+              <Table.Th key={index} className="text-lg">
+                {column.title}
+              </Table.Th>
             ))}
           </Table.Tr>
         </Table.Thead>
@@ -64,7 +70,7 @@ export const TableCustom = <T extends Record<string, any>>({
         <Table.Tbody>{rows}</Table.Tbody>
       </Table>
       {footer && (
-        <div className="border-primary border-b border-l border-r p-3 text-center text-sm">
+        <div className="border-primary border-b border-l border-r p-3 text-center text-lg">
           {footer}
         </div>
       )}

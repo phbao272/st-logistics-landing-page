@@ -6,6 +6,8 @@ import PetSvg from '@assets/svgs/offer/pet.svg';
 import FoodSvg from '@assets/svgs/offer/food.svg';
 import styles from '../styles.module.css';
 import { twMerge } from 'tailwind-merge';
+import { changeActiveTabAtom } from '@/components/shared/tabs/atom/active-tab-atom';
+import { useSetAtom } from 'jotai';
 
 export const scrollToElement = (elementId: string) => {
   const element = document.getElementById(elementId);
@@ -22,29 +24,36 @@ export const scrollToElement = (elementId: string) => {
 interface CardProps {
   icon: string;
   title: string;
+  activeTab: string;
 }
 
 const CARDS: CardProps[] = [
   {
     icon: PetSvg.src,
     title: 'Thương mại điện tử',
+    activeTab: '1',
   },
   {
     icon: FoodSvg.src,
     title: 'Chính ngạch',
+    activeTab: '2',
   },
   {
     icon: PinSvg.src,
     title: 'Tiểu ngạch',
+    activeTab: '3',
   },
 ];
 
-const Card = ({ icon, title }: CardProps) => {
+const Card = ({ icon, title, activeTab }: CardProps) => {
+  const setActiveTab = useSetAtom(changeActiveTabAtom);
+
   return (
     <button
       onClick={(e) => {
         e.preventDefault();
         scrollToElement('tmdt');
+        setActiveTab(activeTab);
       }}
       className="transition-background flex w-full flex-col items-center justify-center gap-5 rounded-[30px] bg-[#fff] p-[30px_20px] text-center shadow-[0px_0px_52.2px_-17px_rgba(0,0,0,0.5)] duration-300"
     >
