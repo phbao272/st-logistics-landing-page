@@ -1,16 +1,18 @@
 'use client';
 
-import { IOptionTab, TabsCustom, TableCustomProps } from '@/components/shared/tabs';
+import { type IOptionTab, TabsCustom } from '@/components/shared/tabs';
 import React from 'react';
 import { PriceContent } from './components/PriceContent';
 import { activeTabAtom } from '@/components/shared/tabs/atom/active-tab-atom';
 import { useAtom } from 'jotai';
+import type { TableCustomProps } from '@/components/shared/tables';
 
 interface IData {
   tab: string;
   subtitle: string;
   title: string;
   description: string;
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   tableProps: TableCustomProps<any>;
 }
 
