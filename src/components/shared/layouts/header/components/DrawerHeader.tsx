@@ -74,11 +74,11 @@ export const DrawerHeader = ({ drawerOpened, toggleDrawer }: Props) => {
         <Text className={classes.drawerMenuTitle}>Liên hệ</Text>
 
         <Flex gap="md" mt="md">
-          <ButtonCustom variant="outline" size="lg">
-            <Link href="tel:+84989559828" target="_blank">
+          <Link href="tel:+84989559828" target="_blank">
+            <ButtonCustom variant="outline" size="lg">
               <IconPhone size={20} />
-            </Link>
-          </ButtonCustom>
+            </ButtonCustom>
+          </Link>
           <ButtonCustom
             variant="outline"
             size="lg"
