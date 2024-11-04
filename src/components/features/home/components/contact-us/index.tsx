@@ -15,16 +15,16 @@ export const ContactUs = () => {
           Đừng ngần ngại liên hệ với chúng tôi, chắc chắn chúng tôi có thể giúp được bạn
         </p>
 
-        <ButtonCustom
-          variant="transparent"
-          className="w-fit"
-          size="xl"
-          rightSection={<IconArrowUpRight size={20} />}
-        >
-          <Link href="https://zalo.me/84989559828" target="_blank">
+        <Link href="https://zalo.me/84989559828" target="_blank">
+          <ButtonCustom
+            variant="transparent"
+            className="w-fit"
+            size="xl"
+            rightSection={<IconArrowUpRight size={20} />}
+          >
             LIÊN HỆ NGAY
-          </Link>
-        </ButtonCustom>
+          </ButtonCustom>
+        </Link>
       </div>
     </div>
   );

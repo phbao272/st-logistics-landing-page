@@ -66,11 +66,12 @@ export function Header() {
                   {item.title}
                 </Link>
               ))}
-              <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
-                <Link href="tel:+84989559828" target="_blank">
+              <Link href="tel:+84989559828" target="_blank">
+                <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
                   <IconPhone size={20} />
-                </Link>
-              </ButtonCustom>
+                </ButtonCustom>
+              </Link>
+
               <Link href="https://www.facebook.com/sotalogistics" target="_blank">
                 <ButtonCustom
                   className="w-fit"
