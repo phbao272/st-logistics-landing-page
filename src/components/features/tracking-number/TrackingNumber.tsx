@@ -8,14 +8,22 @@ import { IconSearch } from '@tabler/icons-react';
 import { Loader } from '@mantine/core';
 
 export const TrackingNumber = () => {
-  const [trackingNumber, setTrackingNumber] = useState('773312314469851');
+  const [trackingNumber, setTrackingNumber] = useState('');
   const [result, setResult] = useState('');
 
   const { isPending, mutate } = useMutation({
     mutationKey: ['trackingNumber', trackingNumber],
     mutationFn: async ({ trackingNumber }: { trackingNumber: string }) => {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/ma-van-don/?num=${trackingNumber}`,
+        `/api/ma-van-don?num=${trackingNumber}`,
+        // `${process.env.NEXT_PUBLIC_APP_URL}/api/ma-van-don/?num=${trackingNumber}`,
+        {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          mode: 'no-cors',
+        },
       );
 
       return res;
@@ -40,7 +48,7 @@ export const TrackingNumber = () => {
   return (
     <div className="container mb-[60px] flex flex-col gap-5">
       <div className="rounded-xl pt-5 md:max-w-6xl md:p-6">
-        <h1 className="mb-6 text-2xl font-bold text-gray-800">Tra cứu vận đơn</h1>
+        <h1 className="mb-6 text-2xl font-bold text-gray-800">Tra cứu hành trình Trung Quốc</h1>
         <form onSubmit={handleSubmit} className="md:mb-6">
           <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <input

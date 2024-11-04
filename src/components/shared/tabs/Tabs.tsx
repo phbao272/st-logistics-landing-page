@@ -16,6 +16,8 @@ type PlacementType = 'left' | 'right' | 'top';
 interface TabsCustomProps {
   placement?: PlacementType;
   options: IOptionTab[];
+  _value?: string;
+  onChange?: (value: string) => void;
 }
 
 const sections = {
@@ -30,8 +32,7 @@ const sections = {
   },
 };
 
-const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
-  const [value, setValue] = useState<string | null>('1');
+const TabsCustom = ({ placement = 'left', options, onChange, _value }: TabsCustomProps) => {
   const [controlsRefs, setControlsRefs] = useState<Record<string, HTMLButtonElement | null>>({});
   const setControlRef = (val: string) => (node: HTMLButtonElement) => {
     controlsRefs[val] = node;
@@ -39,11 +40,24 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
   };
   const { classes } = useStyles({ placement });
 
+  const [internalValue, setInternalValue] = useState<string | null>('1');
+  const currentValue = _value || internalValue;
+
+  const handleChange = (newValue: string | null) => {
+    if (onChange && newValue) {
+      onChange(newValue);
+    } else {
+      setInternalValue(newValue);
+    }
+  };
+
+  console.log('currentValue', currentValue);
+
   if (placement === 'top') {
     return (
       <Tabs
-        value={value}
-        onChange={setValue}
+        value={currentValue}
+        onChange={handleChange}
         variant="none"
         className="gap-5 rounded-[30px] bg-primary p-3 md:p-[30px]"
       >
@@ -59,7 +73,7 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
                 {option.title}
               </Tabs.Tab>
 
-              {value === String(index + 1) ? (
+              {currentValue === String(index + 1) ? (
                 <Tabs.Panel
                   className="block lg:hidden"
                   value={String(index + 1)}
@@ -73,7 +87,7 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
         </Tabs.List>
 
         {options.map((option, index) =>
-          value === String(index + 1) ? (
+          currentValue === String(index + 1) ? (
             <Tabs.Panel className="hidden lg:block" value={String(index + 1)} key={option.title}>
               {option.content}
             </Tabs.Panel>
@@ -86,8 +100,8 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
   return (
     <Tabs
       variant="none"
-      value={value}
-      onChange={setValue}
+      value={currentValue}
+      onChange={handleChange}
       orientation="vertical"
       placement={placement}
       className="gap-[30px] rounded-[30px] bg-white p-3 md:p-[30px]"
@@ -105,7 +119,7 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
                 {option.title}
               </Tabs.Tab>
 
-              {value === String(index + 1) ? (
+              {currentValue === String(index + 1) ? (
                 <Tabs.Panel
                   className="block lg:hidden"
                   value={String(index + 1)}
@@ -120,7 +134,7 @@ const TabsCustom = ({ placement = 'left', options }: TabsCustomProps) => {
       </Tabs.List>
 
       {options.map((option, index) =>
-        value === String(index + 1) ? (
+        currentValue === String(index + 1) ? (
           <Tabs.Panel className="hidden lg:block" value={String(index + 1)} key={option.title}>
             {option.content}
           </Tabs.Panel>

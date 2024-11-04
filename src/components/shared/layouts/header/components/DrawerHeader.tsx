@@ -7,7 +7,7 @@ import React from 'react';
 import { Flex, Image } from '@mantine/core';
 import Link from 'next/link';
 
-import { IconMail, IconPhone, IconX } from '@tabler/icons-react';
+import { IconBrandFacebook, IconPhone, IconX } from '@tabler/icons-react';
 import { ButtonCustom } from '@/components/shared/buttons';
 import { HEADER } from '../Header';
 import { usePathname } from 'next/navigation';
@@ -40,23 +40,21 @@ export const DrawerHeader = ({ drawerOpened, toggleDrawer }: Props) => {
       <Box className={classes.drawerContent}>
         <IconX onClick={toggleDrawer} size={24} className="absolute right-5 top-5 cursor-pointer" />
 
-        <Flex justify="space-between" align="center" className="pt-12">
+        <Flex justify="space-between" align="center" className="mb-4 pt-12">
           <Image
-            src={
-              'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
-            }
+            src={'/images/logo-white-remove-bg.png'}
             alt="logo"
             className={classes.drawerLogo}
           />
         </Flex>
 
         <Text className={classes.drawerTagline}>
-          Logistics With Passion, Partnership With Commitment.
+          Không chỉ giao hàng, chúng tôi giao cả niềm tin.
         </Text>
 
         <Divider color="#414c6e" className="my-8" />
 
-        <Text className={classes.drawerMenuTitle}>OUR MENU</Text>
+        <Text className={classes.drawerMenuTitle}>MENU</Text>
 
         <Flex direction="column" gap="md">
           {HEADER.map((item, index) => (
@@ -73,14 +71,20 @@ export const DrawerHeader = ({ drawerOpened, toggleDrawer }: Props) => {
 
         <Divider color="#414c6e" className="my-8" />
 
-        <Text className={classes.drawerMenuTitle}>FAST CONTACT</Text>
+        <Text className={classes.drawerMenuTitle}>Liên hệ</Text>
 
         <Flex gap="md" mt="md">
           <ButtonCustom variant="outline" size="lg">
-            <IconPhone size={20} />
+            <Link href="tel:+84989559828" target="_blank">
+              <IconPhone size={20} />
+            </Link>
           </ButtonCustom>
-          <ButtonCustom variant="outline" size="lg">
-            <IconMail size={20} />
+          <ButtonCustom
+            variant="outline"
+            size="lg"
+            onClick={() => window.open('https://www.facebook.com/sotalogistics', '_blank')}
+          >
+            <IconBrandFacebook size={20} />
           </ButtonCustom>
         </Flex>
       </Box>

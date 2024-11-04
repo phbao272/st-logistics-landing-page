@@ -1,3 +1,2 @@
-export * from './PetFoodTabs';
-export * from './FoodTabs';
+export * from './PriceTabs';
 export * from './LocalBusinessTabs';

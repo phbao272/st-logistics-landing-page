@@ -8,7 +8,7 @@ import { tss } from '@libs/utils/tss-style';
 import { MainContainer } from '@shared/layouts';
 import React from 'react';
 import { ButtonCustom } from '../../buttons';
-import { IconMail, IconPhone } from '@tabler/icons-react';
+import { IconBrandFacebookFilled, IconPhone } from '@tabler/icons-react';
 import { DrawerHeader } from './components';
 import { twMerge } from 'tailwind-merge';
 
@@ -49,9 +49,7 @@ export function Header() {
           <Group h="100%" px="md" className={classes.headerContent}>
             <Link href={'/'}>
               <Image
-                src={
-                  'https://yourbestpartner.eu/wp-content/uploads/2024/04/logo_Y_B_PARTNER_light-1024x157.png'
-                }
+                src={'/images/logo-white-remove-bg.png'}
                 alt="logo"
                 className={twMerge(classes.logo)}
               />
@@ -69,11 +67,19 @@ export function Header() {
                 </Link>
               ))}
               <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
-                <IconPhone size={20} />
+                <Link href="tel:+84989559828" target="_blank">
+                  <IconPhone size={20} />
+                </Link>
               </ButtonCustom>
-              <ButtonCustom className="w-fit" size="lg" rightSection={<IconMail size={20} />}>
-                Get a quote
-              </ButtonCustom>
+              <Link href="https://www.facebook.com/sotalogistics" target="_blank">
+                <ButtonCustom
+                  className="w-fit"
+                  size="lg"
+                  leftSection={<IconBrandFacebookFilled size={20} />}
+                >
+                  Fanpage
+                </ButtonCustom>
+              </Link>
             </Flex>
 
             <Burger
@@ -158,7 +164,7 @@ const useStyles = tss
     },
 
     logo: {
-      height: headerScrolled ? 25 : 30,
+      height: headerScrolled ? 55 : 70,
       transition: 'height 0.3s ease',
       objectFit: 'contain',
       width: 'auto',
