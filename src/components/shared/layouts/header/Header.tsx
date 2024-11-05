@@ -66,6 +66,11 @@ export function Header() {
                   {item.title}
                 </Link>
               ))}
+
+              <Link href={'https://kh.sota.onl'} target="_blank" className={classes.headerNavLink}>
+                Web theo dõi
+              </Link>
+
               <Link href="tel:+84989559828" target="_blank">
                 <ButtonCustom variant="outline" className="w-fit px-4" size="lg">
                   <IconPhone size={20} />
