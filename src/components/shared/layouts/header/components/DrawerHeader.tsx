@@ -67,6 +67,13 @@ export const DrawerHeader = ({ drawerOpened, toggleDrawer }: Props) => {
               {item.title}
             </Link>
           ))}
+          <Link
+            href={'https://kh.sota.onl'}
+            onClick={toggleDrawer}
+            className={classes.drawerNavLink}
+          >
+            Web theo dõi
+          </Link>
         </Flex>
 
         <Divider color="#414c6e" className="my-8" />
