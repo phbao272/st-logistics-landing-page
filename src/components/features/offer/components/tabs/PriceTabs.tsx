@@ -64,6 +64,7 @@ const DATA: IData[] = [
           price: '17.000',
         },
       ],
+      footer: 'Có thể đàm phán để cân đối hơn về mức giá',
     },
   },
   {

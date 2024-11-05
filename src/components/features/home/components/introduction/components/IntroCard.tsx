@@ -3,11 +3,12 @@
 import { Container } from '@mantine/core';
 import React from 'react';
 import TransportSvg from '@/assets/svgs/transport.svg';
-import AdviceSvg from '@/assets/svgs/advice.svg';
+import AdviceSvg from '@/assets/images/like.jpg';
 import SettlingSvg from '@/assets/svgs/settling.svg';
 import Image from 'next/image';
 
 interface Props {
+  // biome-ignore lint/suspicious/noExplicitAny: <explanation>
   icon: any;
   title: string;
   description: string;
