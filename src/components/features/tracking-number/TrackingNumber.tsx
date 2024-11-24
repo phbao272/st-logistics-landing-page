@@ -30,6 +30,7 @@ export const TrackingNumber = () => {
     },
     async onSuccess(data) {
       const res = await data.json();
+
       const html = res.html as string;
       const array = html.split('<div id="trackingContent">');
       const array2 = array[1].split('</section>');
